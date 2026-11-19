@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seguimiento de bolsines</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="app">
+  <header class="barra">
+    <div class="barra-titulo">
+      <h1>Seguimiento de bolsines</h1>
+      <nav class="migas" aria-label="Ubicación"><a href="index.html">Inicio</a> / Seguimiento</nav>
+    </div>
+    <div class="barra-usuario">
+      <div class="quien"><span id="usuario-nombre"></span><small id="usuario-rol"></small></div>
+      <!-- Flujo alternativo A4 -->
+      <button class="boton boton-claro" id="boton-cancelar" type="button">Cancelar consulta</button>
+    </div>
+  </header>
+
+  <div class="cuerpo">
+    <aside class="panel" aria-label="Bolsines enviados">
+      <section class="panel-seccion origen">
+        <h2>Bolsines enviados desde</h2>
+        <p class="cm" id="cm-usuario">…</p>
+        <p class="resumen" id="resumen"></p>
+      </section>
+
+      <form class="panel-seccion filtros" id="form-filtros" novalidate>
+        <div class="campo">
+          <label for="filtro-precinto">N° de precinto</label>
+          <input id="filtro-precinto" name="precinto" inputmode="numeric" autocomplete="off" placeholder="Ej.: 45103">
+        </div>
+        <div class="campo">
+          <label for="filtro-cm">CM destino</label>
+          <select id="filtro-cm" name="cmDestino">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div class="filtros-acciones">
+          <button class="boton" type="submit">Filtrar</button>
+          <button class="boton boton-secundario" type="button" id="boton-quitar-filtros">Quitar filtros</button>
+        </div>
+      </form>
+
+      <div class="panel-desplazable" id="zona-listas">
+        <div id="mensaje" class="alerta" role="status" hidden></div>
+
+        <h2 class="lista-titulo" id="titulo-ubicados">En el mapa</h2>
+        <ul class="lista-bolsines" id="lista-ubicados"></ul>
+
+        <h2 class="lista-titulo" id="titulo-sin-ubicacion" hidden>Sin ubicación informada</h2>
+        <ul class="lista-bolsines" id="lista-sin-ubicacion"></ul>
+      </div>
+
+      <!-- Flujo alternativo A1 -->
+      <div class="vacio" id="sin-bolsines" hidden>
+        <h2>No hay bolsines en viaje</h2>
+        <p id="sin-bolsines-texto"></p>
+        <a class="boton" href="index.html">Volver al inicio</a>
+      </div>
+    </aside>
+
+    <section class="zona-mapa" aria-label="Mapa de bolsines">
+      <div id="mapa"></div>
+      <div class="leyenda">
+        <h3>Modelo de GPS Tracker</h3>
+        <ul>
+          <li class="modelo-xtr"><i></i>XTR-4500L</li>
+          <li class="modelo-nav"><i></i>NavTrack QX-7A</li>
+          <li class="modelo-geo"><i></i>GeoPulse MTR-900</li>
+        </ul>
+      </div>
+      <div class="cargando" id="cargando">Consultando a los GPS Tracker…</div>
+    </section>
+  </div>
+</div>
+
+<!-- Paso 8: confirmación del envío del correo -->
+<dialog id="dialogo-correo" aria-labelledby="dialogo-correo-titulo">
+  <div class="dialogo-cuerpo">
+    <span class="precinto" id="dialogo-precinto"></span>
+    <h2 id="dialogo-correo-titulo"></h2>
+    <dl class="datos">
+      <dt>N° de precinto</dt><dd class="num" id="dato-precinto"></dd>
+      <dt>CM destino</dt><dd id="dato-destino"></dd>
+      <dt>Última actualización</dt><dd class="num" id="dato-fecha"></dd>
+      <dt>Coordenadas</dt><dd class="num" id="dato-coordenadas"></dd>
+    </dl>
+  </div>
+  <div class="dialogo-acciones">
+    <button class="boton boton-secundario" type="button" id="boton-no-enviar">No enviar</button>
+    <button class="boton" type="button" id="boton-enviar">Enviar correo</button>
+  </div>
+</dialog>
+
+<!-- Paso 11: resultado -->
+<dialog id="dialogo-resultado" aria-labelledby="dialogo-resultado-titulo">
+  <div class="dialogo-cuerpo">
+    <h2 id="dialogo-resultado-titulo">Correo enviado</h2>
+    <p id="resultado-mensaje" style="margin-top:8px"></p>
+    <dl class="datos">
+      <dt>Para</dt><dd id="resultado-destinatario"></dd>
+    </dl>
+    <p class="ruta-archivo" id="resultado-copia"></p>
+  </div>
+  <div class="dialogo-acciones">
+    <button class="boton" type="button" id="boton-finalizar">Finalizar</button>
+  </div>
+</dialog>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/api.js"></script>
+<script src="js/mapa.js"></script>
+<script src="js/seguimiento.js"></script>
+</body>
+</html>

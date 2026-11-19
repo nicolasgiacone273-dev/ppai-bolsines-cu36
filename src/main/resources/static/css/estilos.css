@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Sistema de Gestión de Bolsines - estilos compartidos
+   ========================================================================== */
+
+@font-face { font-family: "Archivo"; src: url("../vendor/fonts/archivo-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../vendor/fonts/archivo-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../vendor/fonts/archivo-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../vendor/fonts/archivo-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../vendor/fonts/archivo-latin-800-normal.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+
+:root {
+  --tinta: #17243b;        /* texto y barra superior */
+  --tinta-suave: #4a5870;  /* texto secundario */
+  --niebla: #eef2f5;       /* fondo de la app */
+  --papel: #ffffff;        /* paneles */
+  --linea: #d5dce4;        /* bordes */
+  --precinto: #e8b10a;     /* amarillo de precinto: selección */
+  --alerta-fondo: #fdf3dc;
+  --alerta-texto: #7a4b00;
+  --info-fondo: #e6eef8;
+  --info-texto: #1f3f6b;
+  --exito: #1d6b43;
+
+  /* un color por modelo de GPS Tracker (uno por adaptador) */
+  --gps-xtr: #1f7a80;
+  --gps-nav: #4153a6;
+  --gps-geo: #9b3f7a;
+
+  --radio: 6px;
+  --sombra-panel: 0 1px 0 rgba(23, 36, 59, 0.06);
+  font-family: "Archivo", "Segoe UI", system-ui, sans-serif;
+  color: var(--tinta);
+  background: var(--niebla);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100vh; }
+h1, h2, h3, p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+
+:focus-visible { outline: 3px solid var(--precinto); outline-offset: 2px; }
+
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 40px; padding: 0 16px; border-radius: var(--radio);
+  border: 1px solid var(--tinta); background: var(--tinta); color: #fff;
+  font-weight: 600; cursor: pointer; text-decoration: none;
+}
+.boton:hover { background: #24375a; }
+.boton-secundario { background: transparent; color: var(--tinta); border-color: var(--linea); }
+.boton-secundario:hover { background: #e3e9ef; }
+.boton-claro { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.35); }
+.boton-claro:hover { background: rgba(255, 255, 255, 0.1); }
+.boton:disabled { opacity: 0.55; cursor: progress; }
+
+/* ---------- Barra superior ---------- */
+.barra {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 60px; padding: 0 20px; background: var(--tinta); color: #fff;
+}
+.barra-titulo { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.barra-titulo h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
+.migas { font-size: 13px; color: #b7c3d6; }
+.migas a { color: #dbe4f1; }
+.barra-usuario { display: flex; align-items: center; gap: 14px; font-size: 14px; }
+.barra-usuario .quien { text-align: right; line-height: 1.25; }
+.barra-usuario .quien small { display: block; color: #b7c3d6; }
+
+/* ---------- Precinto: la etiqueta que identifica a cada bolsín ---------- */
+.precinto {
+  --color-modelo: var(--tinta);
+  position: relative; display: inline-flex; align-items: center;
+  height: 28px; padding: 0 10px 0 22px; border-radius: 4px 14px 14px 4px;
+  background: var(--color-modelo); color: #fff;
+  font-weight: 800; font-size: 15px; font-variant-numeric: tabular-nums; letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.precinto::before {           /* el agujero del precinto */
+  content: ""; position: absolute; left: 7px; top: 50%; width: 8px; height: 8px; margin-top: -4px;
+  border-radius: 50%; background: var(--papel); box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, 0.18);
+}
+.modelo-xtr { --color-modelo: var(--gps-xtr); }
+.modelo-nav { --color-modelo: var(--gps-nav); }
+.modelo-geo { --color-modelo: var(--gps-geo); }
+.modelo-otro { --color-modelo: #6b7280; }
+.precinto.apagado { --color-modelo: #9aa5b4; }
+
+/* ---------- Alertas ---------- */
+.alerta { padding: 10px 12px; border-radius: var(--radio); font-size: 14px; }
+.alerta[hidden] { display: none; }
+.alerta-advertencia { background: var(--alerta-fondo); color: var(--alerta-texto); }
+.alerta-info { background: var(--info-fondo); color: var(--info-texto); }
+.alerta-exito { background: #e3f3ea; color: var(--exito); }
+
+/* ==========================================================================
+   Pantalla de inicio (simulación de inicio de sesión)
+   ========================================================================== */
+.inicio { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+.inicio-cabecera { margin-bottom: 28px; }
+.inicio-cabecera h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.inicio-cabecera p { margin-top: 8px; color: var(--tinta-suave); max-width: 60ch; }
+.inicio .alerta { margin-bottom: 20px; }
+
+.grupo-usuarios { margin-top: 24px; }
+.grupo-usuarios h2 { font-size: 15px; font-weight: 700; color: var(--tinta-suave); margin-bottom: 8px; }
+.lista-usuarios { list-style: none; margin: 0; padding: 0; background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); }
+.lista-usuarios li + li { border-top: 1px solid var(--linea); }
+.usuario {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 16px; width: 100%;
+  padding: 12px 16px; border: 0; background: none; text-align: left; cursor: pointer;
+}
+.usuario:hover { background: #f5f8fa; }
+.usuario strong { font-weight: 700; }
+.usuario span { color: var(--tinta-suave); font-size: 14px; }
+.usuario em { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-weight: 600; font-size: 14px; color: var(--tinta); }
+
+.menu { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 24px; }
+.menu h2 { font-size: 22px; font-weight: 800; }
+.menu .subtitulo { color: var(--tinta-suave); margin-top: 4px; }
+.menu-opciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.opcion-principal {
+  display: grid; gap: 4px; padding: 16px 18px; min-width: 280px; border-radius: var(--radio);
+  border: 1px solid var(--tinta); background: var(--tinta); color: #fff; text-align: left; cursor: pointer; text-decoration: none;
+}
+.opcion-principal strong { font-size: 17px; }
+.opcion-principal span { color: #c9d4e4; font-size: 14px; }
+.opcion-principal:hover { background: #24375a; }
+
+/* ==========================================================================
+   Pantalla del CU 36: seguimiento de bolsines
+   ========================================================================== */
+.app { display: grid; grid-template-rows: auto 1fr; height: 100vh; }
+.cuerpo { display: grid; grid-template-columns: 390px 1fr; min-height: 0; }
+
+.panel { display: flex; flex-direction: column; min-height: 0; background: var(--papel); border-right: 1px solid var(--linea); }
+.panel-seccion { padding: 16px 18px; border-bottom: 1px solid var(--linea); }
+.panel-desplazable { overflow-y: auto; flex: 1; padding-bottom: 24px; }
+
+.origen h2 { font-size: 14px; font-weight: 500; color: var(--tinta-suave); }
+.origen .cm { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin-top: 2px; }
+.origen .resumen { margin-top: 6px; font-size: 14px; color: var(--tinta-suave); }
+
+.filtros { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 10px; }
+.campo { display: grid; gap: 4px; }
+.campo label { font-size: 13px; font-weight: 600; color: var(--tinta-suave); }
+.campo input, .campo select {
+  height: 38px; padding: 0 10px; border: 1px solid var(--linea); border-radius: var(--radio); background: #fff; width: 100%;
+}
+.filtros-acciones { grid-column: 1 / -1; display: flex; gap: 8px; }
+.filtros-acciones .boton { flex: 1; min-height: 36px; }
+#mensaje { margin: 12px 18px 0; }
+
+.lista-titulo { padding: 16px 18px 6px; font-size: 14px; font-weight: 700; color: var(--tinta-suave); }
+.lista-bolsines { list-style: none; margin: 0; padding: 0 10px; }
+.bolsin {
+  display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: start; width: 100%;
+  padding: 10px 8px; border: 0; border-radius: var(--radio); background: none; text-align: left; cursor: pointer;
+}
+.bolsin:hover { background: #f2f5f8; }
+.bolsin.seleccionado { background: #fff7dc; box-shadow: inset 3px 0 0 var(--precinto); }
+.bolsin .precinto { grid-row: 1 / span 3; margin-top: 2px; }
+.bolsin .destino { font-weight: 700; }
+.bolsin .detalle { font-size: 13px; color: var(--tinta-suave); }
+.bolsin-sin-ubicacion { cursor: default; }
+.bolsin-sin-ubicacion:hover { background: none; }
+.bolsin-sin-ubicacion .motivo { font-size: 13px; color: var(--alerta-texto); }
+
+.vacio { padding: 28px 18px; }
+.vacio h2 { font-size: 18px; font-weight: 800; }
+.vacio p { margin: 6px 0 16px; color: var(--tinta-suave); }
+
+/* ---------- Mapa ---------- */
+.zona-mapa { position: relative; min-height: 0; }
+#mapa { position: absolute; inset: 0; background: #dfe6ec; }
+.leyenda {
+  position: absolute; left: 12px; bottom: 24px; z-index: 500;
+  background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 10px 12px; font-size: 13px;
+}
+.leyenda h3 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.leyenda ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.leyenda li { display: flex; align-items: center; gap: 8px; }
+.leyenda i { width: 14px; height: 14px; border-radius: 3px 7px 7px 3px; background: var(--color-modelo); }
+.cargando {
+  position: absolute; inset: 0; z-index: 600; display: grid; place-items: center;
+  background: rgba(238, 242, 245, 0.85); font-weight: 600;
+}
+.cargando[hidden] { display: none; }
+
+/* marcador del mapa: el mismo precinto que en la lista */
+.marcador-bolsin { background: none; border: 0; }
+.marcador-bolsin svg { display: block; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35)); cursor: pointer; }
+
+/* ---------- Diálogos (paso 8 y resultado) ---------- */
+dialog {
+  width: min(480px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 10px;
+  color: var(--tinta); box-shadow: 0 20px 60px rgba(23, 36, 59, 0.35);
+}
+dialog::backdrop { background: rgba(23, 36, 59, 0.45); }
+.dialogo-cuerpo { padding: 22px 22px 8px; }
+.dialogo-cuerpo h2 { font-size: 20px; font-weight: 800; line-height: 1.25; margin-top: 12px; }
+.datos { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 16px 0 6px; font-size: 14px; }
+.datos dt { color: var(--tinta-suave); }
+.datos dd { margin: 0; font-weight: 600; }
+.dialogo-acciones { display: flex; justify-content: flex-end; gap: 10px; padding: 16px 22px 20px; }
+.ruta-archivo { font-size: 13px; color: var(--tinta-suave); word-break: break-all; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .app { height: auto; min-height: 100vh; }
+  .cuerpo { grid-template-columns: 1fr; }
+  .zona-mapa { height: 55vh; order: -1; }
+  .panel { border-right: 0; }
+  .barra { flex-wrap: wrap; padding: 10px 16px; }
+  .barra-usuario .quien { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

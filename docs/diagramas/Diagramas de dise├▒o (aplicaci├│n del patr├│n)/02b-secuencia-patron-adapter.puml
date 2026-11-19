@@ -1,0 +1,70 @@
+@startuml 02b-secuencia-patron-adapter
+title CU 36 Consultar seguimiento de bolsines - Aplicación del patrón Adapter\nPasos 4 y 5 del flujo básico (extracto de la vista dinámica completa; GPS Tracker modelo XTR-4500L)
+
+hide footbox
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign left
+skinparam maxMessageSize 320
+skinparam sequence {
+  ArrowColor #17243B
+  LifeLineBorderColor #4A5870
+  ParticipantBorderColor #17243B
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+' Los objetos en color naranja representan a todos los objetos de la clase
+' (o a un subconjunto); los blancos, a una única instancia.
+control ":GestorConsultar\nSeguimientoBolsines" as G
+entity ":Bolsin" as B #F6C28B
+entity ":ComisionMedica" as CM #F6C28B
+entity ":GPSTracker" as GT #F6C28B
+participant ":AdaptadorGPSTracker\nXTR4500L" as A
+participant ":ServicioGPSTracker\nXTR4500L" as SV
+participant ":UbicacionBolsin" as U #F6C28B
+
+note over G
+  Extracto de la vista dinámica completa: el gestor
+  (Cliente) ya buscó los bolsines Enviados de la CM del
+  usuario (pasos 2 y 3) y ahora pide la ubicación de cada
+  uno a través de la interfaz IAdaptadorGPSTracker (Objetivo).
+  El adaptador traduce el pedido a la API del modelo del
+  GPS Tracker (Adaptable) y devuelve un UbicacionBolsin.
+end note
+activate G
+G -> G : solicitarUbicacionesAlGPSTracker() : void
+loop mientras haya bolsines enviados
+  G -> B : conocerModeloGPSTracker() : String
+  B -> GT : getModelo() : String
+  G -> G : obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+  note right of G
+    El gestor sólo conoce la interfaz
+    IAdaptadorGPSTracker. Para el modelo
+    XTR-4500L obtiene este adaptador.
+  end note
+  G -> B : getNumeroBolsin() : Integer
+  G -> B : obtenerCodigoCMOrigen() : String
+  B -> CM : getCodigo() : String
+  G -> B : obtenerCodigoCMDestino() : String
+  B -> CM : getCodigo() : String
+  G -> A : obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  activate A
+  A -> SV : getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  note right of SV
+    El servicio es el Adaptable: representa al endpoint
+    getBolsinLocation() del GPS Tracker XTR-4500L
+    (actor secundario). Devuelve un JSON en String:
+    {"items":[{numeroBolsin, latitud,
+    longitud, fechaHoraUltimaActualizacion}]}
+  end note
+  A -> A : interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  create U
+  A --> U : new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime)
+  deactivate A
+end
+deactivate G
+@enduml

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1000px" preserveAspectRatio="none" style="width:1576px;height:1000px;background:#FFFFFF;" version="1.1" viewBox="0 0 1576 1000" width="1576px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="43.8789" id="_title" style="stroke:none;stroke-width:1.0;" width="699" x="440" y="10"/><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="500" x="539.5" y="28.5625">CU 36 Consultar seguimiento de bolsines - Aplicación del patrón Adapter</text><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="689" x="445" y="45.502">Pasos 4 y 5 del flujo básico (extracto de la vista dinámica completa; GPS Tracker modelo XTR-4500L)</text><rect fill="#FFFFFF" height="847.5322" style="stroke:#4A5870;stroke-width:1.0;" width="10" x="198" y="135.7578"/><rect fill="#FFFFFF" height="263.7539" style="stroke:#4A5870;stroke-width:1.0;" width="10" x="877" y="704.5361"/><rect fill="none" height="676.4258" style="stroke:#000000;stroke-width:1.5;" width="1447" x="123" y="299.8643"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="203" x2="203" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="483" x2="483" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="630" x2="630" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="743" x2="743" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="882" x2="882" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1221.5" x2="1221.5" y1="125.7578" y2="993.29"/><line style="stroke:#4A5870;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1366.5" x2="1366.5" y1="955.6958" y2="993.29"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="109" x="145.5" y="105.4414">:GestorConsultar</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="134" x="133" y="122.3809">SeguimientoBolsines</text><ellipse cx="203" cy="75.8789" fill="#E2E2F0" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><polygon fill="#181818" points="199,63.8789,205,58.8789,203,63.8789,205,68.8789,199,63.8789" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="42" x="459" y="122.3809">:Bolsin</text><ellipse cx="483" cy="92.8184" fill="#F6C28B" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="471" x2="495" y1="106.8184" y2="106.8184"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="112" x="571" y="122.3809">:ComisionMedica</text><ellipse cx="630" cy="92.8184" fill="#F6C28B" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="618" x2="642" y1="106.8184" y2="106.8184"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="83" x="699" y="122.3809">:GPSTracker</text><ellipse cx="743.5" cy="92.8184" fill="#F6C28B" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="731.5" x2="755.5" y1="106.8184" y2="106.8184"/><rect fill="#FFFFFF" height="47.8789" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="168" x="798" y="76.8789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="154" x="805" y="97.4414">:AdaptadorGPSTracker</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="72" x="846" y="114.3809">XTR4500L</text><rect fill="#FFFFFF" height="47.8789" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="149" x="1147.5" y="76.8789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="135" x="1154.5" y="97.4414">:ServicioGPSTracker</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="72" x="1186" y="114.3809">XTR4500L</text><rect fill="#FFFFFF" height="847.5322" style="stroke:#4A5870;stroke-width:1.0;" width="10" x="198" y="135.7578"/><rect fill="#FFFFFF" height="263.7539" style="stroke:#4A5870;stroke-width:1.0;" width="10" x="877" y="704.5361"/><path d="M5,140.7578 L5,244.7578 L401,244.7578 L401,150.7578 L391,140.7578 L5,140.7578 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M391,140.7578 L391,150.7578 L401,150.7578 L391,140.7578 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="297" x="11" y="158.3516">Extracto de la vista dinámica completa: el gestor</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="335" x="11" y="174.0811">(Cliente) ya buscó los bolsines Enviados de la CM del</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="343" x="11" y="189.8105">usuario (pasos 2 y 3) y ahora pide la ubicación de cada</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="375" x="11" y="205.54">uno a través de la interfaz IAdaptadorGPSTracker (Objetivo).</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="335" x="11" y="221.2695">El adaptador traduce el pedido a la API del modelo del</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="352" x="11" y="236.999">GPS Tracker (Adaptable) y devuelve un UbicacionBolsin.</text><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="250" y1="271.8643" y2="271.8643"/><line style="stroke:#17243B;stroke-width:1.0;" x1="250" x2="250" y1="271.8643" y2="284.8643"/><line style="stroke:#17243B;stroke-width:1.0;" x1="209" x2="250" y1="284.8643" y2="284.8643"/><polygon fill="#17243B" points="219,280.8643,209,284.8643,219,288.8643,215,284.8643" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="256" x="215" y="266.7285">solicitarUbicacionesAlGPSTracker() : void</text><path d="M123,299.8643 L196,299.8643 L196,307.5938 L186,317.5938 L123,317.5938 L123,299.8643 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="676.4258" style="stroke:#000000;stroke-width:1.5;" width="1447" x="123" y="299.8643"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="28" x="138" y="313.458">loop</text><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="186" x="211" y="312.5205">[mientras haya bolsines enviados]</text><polygon fill="#17243B" points="471,335.3232,481,339.3232,471,343.3232,475,339.3232" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="477" y1="339.3232" y2="339.3232"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="229" x="215" y="334.1875">conocerModeloGPSTracker() : String</text><polygon fill="#17243B" points="731.5,365.0527,741.5,369.0527,731.5,373.0527,735.5,369.0527" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="483" x2="737.5" y1="369.0527" y2="369.0527"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="125" x="490" y="363.917">getModelo() : String</text><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="250" y1="414.5117" y2="414.5117"/><line style="stroke:#17243B;stroke-width:1.0;" x1="250" x2="250" y1="414.5117" y2="427.5117"/><line style="stroke:#17243B;stroke-width:1.0;" x1="209" x2="250" y1="427.5117" y2="427.5117"/><polygon fill="#17243B" points="219,423.5117,209,427.5117,219,431.5117,215,427.5117" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="225" x="215" y="393.6465">obtenerAdaptador(modelo : String) :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="140" x="215" y="409.376">IAdaptadorGPSTracker</text><path d="M213,440.5117 L213,497.5117 L474,497.5117 L474,450.5117 L464,440.5117 L213,440.5117 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M464,440.5117 L464,450.5117 L474,450.5117 L464,440.5117 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="200" x="219" y="458.1055">El gestor sólo conoce la interfaz</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="240" x="219" y="473.835">IAdaptadorGPSTracker. Para el modelo</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="222" x="219" y="489.5645">XTR-4500L obtiene este adaptador.</text><polygon fill="#17243B" points="471,520.4297,481,524.4297,471,528.4297,475,524.4297" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="477" y1="524.4297" y2="524.4297"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="174" x="215" y="519.2939">getNumeroBolsin() : Integer</text><polygon fill="#17243B" points="471,550.1592,481,554.1592,471,558.1592,475,554.1592" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="477" y1="554.1592" y2="554.1592"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="216" x="215" y="549.0234">obtenerCodigoCMOrigen() : String</text><polygon fill="#17243B" points="618,579.8887,628,583.8887,618,587.8887,622,583.8887" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="483" x2="624" y1="583.8887" y2="583.8887"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="123" x="490" y="578.7529">getCodigo() : String</text><polygon fill="#17243B" points="471,609.6182,481,613.6182,471,617.6182,475,613.6182" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="477" y1="613.6182" y2="613.6182"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="221" x="215" y="608.4824">obtenerCodigoCMDestino() : String</text><polygon fill="#17243B" points="618,639.3477,628,643.3477,618,647.3477,622,643.3477" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="483" x2="624" y1="643.3477" y2="643.3477"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="123" x="490" y="638.2119">getCodigo() : String</text><polygon fill="#17243B" points="865,700.5361,875,704.5361,865,708.5361,869,704.5361" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="208" x2="871" y1="704.5361" y2="704.5361"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="232" x="215" y="667.9414">obtenerUbicacion(numeroBolsin : int,</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="281" x="215" y="683.6709">codigoCMOrigen : String, codigoCMDestino :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="152" x="215" y="699.4004">String) : UbicacionBolsin</text><polygon fill="#17243B" points="1210,745.9951,1220,749.9951,1210,753.9951,1214,749.9951" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;" x1="887" x2="1216" y1="749.9951" y2="749.9951"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="307" x="894" y="729.1299">getBolsinLocation(apiKey : String, numeroBolsin :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="311" x="894" y="744.8594">int, codigoComisionMedicaOrigen : String) : String</text><path d="M1227,762.9951 L1227,850.9951 L1560,850.9951 L1560,772.9951 L1550,762.9951 L1227,762.9951 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M1550,762.9951 L1550,772.9951 L1560,772.9951 L1550,762.9951 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="312" x="1233" y="780.5889">El servicio es el Adaptable: representa al endpoint</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="298" x="1233" y="796.3184">getBolsinLocation() del GPS Tracker XTR-4500L</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="303" x="1233" y="812.0479">(actor secundario). Devuelve un JSON en String:</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="201" x="1233" y="827.7773">{"items":[{numeroBolsin, latitud,</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="259" x="1233" y="843.5068">longitud, fechaHoraUltimaActualizacion}]}</text><line style="stroke:#17243B;stroke-width:1.0;" x1="887" x2="929" y1="894.1016" y2="894.1016"/><line style="stroke:#17243B;stroke-width:1.0;" x1="929" x2="929" y1="894.1016" y2="907.1016"/><line style="stroke:#17243B;stroke-width:1.0;" x1="888" x2="929" y1="907.1016" y2="907.1016"/><polygon fill="#17243B" points="898,903.1016,888,907.1016,898,911.1016,894,907.1016" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="308" x="894" y="873.2363">interpretarJson(json : String, numeroBolsin : int) :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="99" x="894" y="888.9658">UbicacionBolsin</text><polygon fill="#17243B" points="1294.5,964.29,1304.5,968.29,1294.5,972.29,1298.5,968.29" style="stroke:#17243B;stroke-width:1.0;"/><line style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="882" x2="1300.5" y1="968.29" y2="968.29"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="311" x="889" y="931.6953">new(numeroBolsin : int, latitud : double, longitud :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="243" x="889" y="947.4248">double, fechaHoraUltimaActualizacion :</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="95" x="889" y="963.1543">LocalDateTime)</text><rect fill="#F6C28B" height="30.9395" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="121" x="1306.5" y="934.3506"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="107" x="1313.5" y="954.9131">:UbicacionBolsin</text><!--MD5=[4a6fa52721783d47141414297629a4ad]
+@startuml 02b-secuencia-patron-adapter
+title CU 36 Consultar seguimiento de bolsines - Aplicación del patrón Adapter\nPasos 4 y 5 del flujo básico (extracto de la vista dinámica completa; GPS Tracker modelo XTR-4500L)
+
+hide footbox
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign left
+skinparam maxMessageSize 320
+skinparam sequence {
+  ArrowColor #17243B
+  LifeLineBorderColor #4A5870
+  ParticipantBorderColor #17243B
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+' Los objetos en color naranja representan a todos los objetos de la clase
+' (o a un subconjunto); los blancos, a una única instancia.
+control ":GestorConsultar\nSeguimientoBolsines" as G
+entity ":Bolsin" as B #F6C28B
+entity ":ComisionMedica" as CM #F6C28B
+entity ":GPSTracker" as GT #F6C28B
+participant ":AdaptadorGPSTracker\nXTR4500L" as A
+participant ":ServicioGPSTracker\nXTR4500L" as SV
+participant ":UbicacionBolsin" as U #F6C28B
+
+note over G
+  Extracto de la vista dinámica completa: el gestor
+  (Cliente) ya buscó los bolsines Enviados de la CM del
+  usuario (pasos 2 y 3) y ahora pide la ubicación de cada
+  uno a través de la interfaz IAdaptadorGPSTracker (Objetivo).
+  El adaptador traduce el pedido a la API del modelo del
+  GPS Tracker (Adaptable) y devuelve un UbicacionBolsin.
+end note
+activate G
+G -> G : solicitarUbicacionesAlGPSTracker() : void
+loop mientras haya bolsines enviados
+  G -> B : conocerModeloGPSTracker() : String
+  B -> GT : getModelo() : String
+  G -> G : obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+  note right of G
+    El gestor sólo conoce la interfaz
+    IAdaptadorGPSTracker. Para el modelo
+    XTR-4500L obtiene este adaptador.
+  end note
+  G -> B : getNumeroBolsin() : Integer
+  G -> B : obtenerCodigoCMOrigen() : String
+  B -> CM : getCodigo() : String
+  G -> B : obtenerCodigoCMDestino() : String
+  B -> CM : getCodigo() : String
+  G -> A : obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  activate A
+  A -> SV : getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  note right of SV
+    El servicio es el Adaptable: representa al endpoint
+    getBolsinLocation() del GPS Tracker XTR-4500L
+    (actor secundario). Devuelve un JSON en String:
+    {"items":[{numeroBolsin, latitud,
+    longitud, fechaHoraUltimaActualizacion}]}
+  end note
+  A -> A : interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  create U
+  A - -> U : new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime)
+  deactivate A
+end
+deactivate G
+@enduml
+
+@startuml 02b-secuencia-patron-adapter
+title CU 36 Consultar seguimiento de bolsines - Aplicación del patrón Adapter\nPasos 4 y 5 del flujo básico (extracto de la vista dinámica completa; GPS Tracker modelo XTR-4500L)
+
+hide footbox
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign left
+skinparam maxMessageSize 320
+skinparam sequence {
+  ArrowColor #17243B
+  LifeLineBorderColor #4A5870
+  ParticipantBorderColor #17243B
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+control ":GestorConsultar\nSeguimientoBolsines" as G
+entity ":Bolsin" as B #F6C28B
+entity ":ComisionMedica" as CM #F6C28B
+entity ":GPSTracker" as GT #F6C28B
+participant ":AdaptadorGPSTracker\nXTR4500L" as A
+participant ":ServicioGPSTracker\nXTR4500L" as SV
+participant ":UbicacionBolsin" as U #F6C28B
+
+note over G
+  Extracto de la vista dinámica completa: el gestor
+  (Cliente) ya buscó los bolsines Enviados de la CM del
+  usuario (pasos 2 y 3) y ahora pide la ubicación de cada
+  uno a través de la interfaz IAdaptadorGPSTracker (Objetivo).
+  El adaptador traduce el pedido a la API del modelo del
+  GPS Tracker (Adaptable) y devuelve un UbicacionBolsin.
+end note
+activate G
+G -> G : solicitarUbicacionesAlGPSTracker() : void
+loop mientras haya bolsines enviados
+  G -> B : conocerModeloGPSTracker() : String
+  B -> GT : getModelo() : String
+  G -> G : obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+  note right of G
+    El gestor sólo conoce la interfaz
+    IAdaptadorGPSTracker. Para el modelo
+    XTR-4500L obtiene este adaptador.
+  end note
+  G -> B : getNumeroBolsin() : Integer
+  G -> B : obtenerCodigoCMOrigen() : String
+  B -> CM : getCodigo() : String
+  G -> B : obtenerCodigoCMDestino() : String
+  B -> CM : getCodigo() : String
+  G -> A : obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  activate A
+  A -> SV : getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  note right of SV
+    El servicio es el Adaptable: representa al endpoint
+    getBolsinLocation() del GPS Tracker XTR-4500L
+    (actor secundario). Devuelve un JSON en String:
+    {"items":[{numeroBolsin, latitud,
+    longitud, fechaHoraUltimaActualizacion}]}
+  end note
+  A -> A : interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  create U
+  A - -> U : new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime)
+  deactivate A
+end
+deactivate G
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 15:12:26 ART 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,171 @@
+@startuml 01b-clases-patron-adapter
+title CU 36 Consultar seguimiento de bolsines - Estructura del patrón Adapter (extracto de la vista estática completa)
+
+hide circle
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+left to right direction
+skinparam nodesep 40
+skinparam ranksep 70
+skinparam defaultFontName Arial
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #17243B
+  ArrowColor #17243B
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+
+  class GestorConsultarSeguimientoBolsines <<control>> {
+    - sesion : SesionUsuario
+    - bolsinRepository : BolsinRepository
+    - empleadoRepository : EmpleadoRepository
+    - gestorNotificarUbicacion : GestorNotificarUbicacionBolsin
+    - adaptadoresPorModelo : Map<String, IAdaptadorGPSTracker>
+    - cmUsuarioLogueado : ComisionMedica
+    - bolsinesEnviados : List<Bolsin>
+    - ubicacionesPorBolsin : Map<Integer, UbicacionBolsin>
+    - motivosSinUbicacion : Map<Integer, String>
+    - bolsinSeleccionado : Bolsin
+    + opcionConsultarSeguimiento() : ResultadoSeguimientoDTO
+    - buscarCMUsuarioLogueado() : void
+    - buscarBolsinesEnviados() : void
+    - solicitarUbicacionesAlGPSTracker() : void
+    - obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+    + tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResultadoSeguimientoDTO
+    + tomarSeleccionBolsin(numeroBolsin : int) : ConsultaEnvioCorreoDTO
+    + tomarConfirmacionEnvioCorreo(confirma : boolean) : ResultadoNotificacionDTO
+    - buscarEmailGCMDestino() : String
+    + cancelarCU() : void
+    + finCU() : void
+    - armarResultado(bolsines : List<Bolsin>, mensaje : String, tipoMensaje : String) : ResultadoSeguimientoDTO
+    - armarOpcionesCMDestino() : List<OpcionCMDTO>
+    - mensajeSinUbicacion() : String
+    - tipoMensajeSinUbicacion() : String
+    - buscarBolsinEnviado(numeroBolsin : int) : Bolsin
+    - verificarConsultaIniciada() : void
+    - limpiarEjecucion() : void
+  }
+  interface IAdaptadorGPSTracker <<interface>> {
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  }
+  class AdaptadorGPSTrackerXTR4500L {
+    - servicioXTR4500L : ServicioGPSTrackerXTR4500L
+    - apiKey : String
+    - objectMapper : ObjectMapper
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  }
+  class AdaptadorGPSTrackerNavTrackQX7A {
+    - servicioNavTrackQX7A : ServicioGPSTrackerNavTrackQX7A
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarTexto(datos : String, numeroBolsin : int) : UbicacionBolsin
+  }
+  class AdaptadorGPSTrackerGeoPulseMTR900 {
+    - servicioGeoPulseMTR900 : ServicioGPSTrackerGeoPulseMTR900
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarMatriz(matriz : Object[][], numeroBolsin : int) : UbicacionBolsin
+  }
+  class ServicioGPSTrackerXTR4500L <<adaptable>> {
+    - urlBase : String
+    + getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  }
+  class ServicioGPSTrackerNavTrackQX7A <<adaptable>> {
+    - urlBase : String
+    + retrieveTrackingData(apiKey : String, numeroBolsin : int, codigoComisionMedicaDestino : String) : String
+  }
+  class ServicioGPSTrackerGeoPulseMTR900 <<adaptable>> {
+    - urlBase : String
+    - objectMapper : ObjectMapper
+    + fetchCargoPositions(apiKey : String, numeroBolsin : int) : Object[][]
+  }
+  class UbicacionBolsin {
+    - numeroBolsin : int
+    - latitud : double
+    - longitud : double
+    - fechaHoraUltimaActualizacion : LocalDateTime
+    + new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime) : void
+    + getNumeroBolsin() : int
+    + getLatitud() : double
+    + getLongitud() : double
+    + getFechaHoraUltimaActualizacion() : LocalDateTime
+  }
+  class Bolsin <<entity>> {
+    - numeroBolsin : Integer
+    - numeroPrecinto : Integer
+    - fecha : LocalDate
+    - peso : Double
+    + esTuCMOrigen(comisionMedica : ComisionMedica) : boolean
+    + sosEnviado() : boolean
+    + getNumeroBolsin() : Integer
+    + getNroPrecinto() : Integer
+    + obtenerCMDestino() : ComisionMedica
+    + obtenerCodigoCMOrigen() : String
+    + obtenerCodigoCMDestino() : String
+    + conocerModeloGPSTracker() : String
+    + tenesPrecinto(precinto : Integer) : boolean
+    + tenesCMDestino(codigoCM : String) : boolean
+  }
+  class GPSTracker <<entity>> {
+    - numeroSerie : String
+    - modelo : String
+    + getModelo() : String
+  }
+  class ComisionMedica <<entity>> {
+    - codigo : String
+    - nombre : String
+    - direccion : String
+    - email : String
+    - telefono : String
+    + esLaMisma(otra : ComisionMedica) : boolean
+    + getCodigo() : String
+    + getNombre() : String
+  }
+
+note right of IAdaptadorGPSTracker
+  <b>Objetivo</b> (Target): la única
+  interfaz que conoce el Cliente.
+end note
+note right of GestorConsultarSeguimientoBolsines
+  <b>Cliente</b>: con obtenerAdaptador(modelo)
+  elige el adaptador según el modelo del
+  GPSTracker del bolsín y siempre llama
+  a obtenerUbicacion().
+end note
+note right of ServicioGPSTrackerXTR4500L
+  <b>Adaptables</b> (Adaptee): API de cada modelo, con
+  nombres, parámetros y respuestas incompatibles
+  (JSON en String / String con comas / matriz).
+end note
+note right of GPSTracker
+  Clase agregada al Modelo de Dominio
+  (RNF 6: cada bolsín tiene su GPS Tracker).
+end note
+
+note "Esta vista incluye los atributos y métodos de diseño de\nla implementación, y no sólo los usados en la vista dinámica.\nLos métodos de los flujos alternativos (filtros, cancelación,\ncierre de sesión, errores de formato) no tienen diagrama de\nsecuencia propio. new() representa al constructor de Java y\nse dibuja sólo en UbicacionBolsin, la clase que se crea en la\nvista dinámica.\n\nSe omiten los detalles técnicos de la implementación web:\nlas clases DTO (objetos que sólo transportan datos entre el\ngestor y la vista; en las firmas se usan como tipos de dato),\nel cliente HTTP que usan los servicios, las clases de\nexcepción, las constantes (atributos estáticos), los\nconstructores y métodos de búsqueda (@Lookup) con los que\nSpring entrega las dependencias, toString() y el id técnico\nde JPA." as NotaAlcance
+
+GestorConsultarSeguimientoBolsines ..> IAdaptadorGPSTracker
+GestorConsultarSeguimientoBolsines ..> UbicacionBolsin
+GestorConsultarSeguimientoBolsines ..> Bolsin
+GestorConsultarSeguimientoBolsines ..> ComisionMedica
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerXTR4500L
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerNavTrackQX7A
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerGeoPulseMTR900
+AdaptadorGPSTrackerXTR4500L ..> ServicioGPSTrackerXTR4500L
+AdaptadorGPSTrackerNavTrackQX7A ..> ServicioGPSTrackerNavTrackQX7A
+AdaptadorGPSTrackerGeoPulseMTR900 ..> ServicioGPSTrackerGeoPulseMTR900
+IAdaptadorGPSTracker ..> UbicacionBolsin : <<create>>
+Bolsin --> "1" ComisionMedica : origen
+Bolsin --> "1" ComisionMedica : destino
+Bolsin --> "1" GPSTracker : gpsTracker
+@enduml

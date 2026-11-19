@@ -1,0 +1,6 @@
+target/
+data/
+correos-enviados/
+.idea/
+*.iml
+.mvn/wrapper/maven-wrapper.jar

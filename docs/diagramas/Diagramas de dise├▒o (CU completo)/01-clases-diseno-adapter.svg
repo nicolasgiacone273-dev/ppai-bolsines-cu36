@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="2431px" preserveAspectRatio="none" style="width:5291px;height:2431px;background:#FFFFFF;" version="1.1" viewBox="0 0 5291 2431" width="5291px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.9395" id="_title" style="stroke:none;stroke-width:1.0;" width="585" x="2346" y="5"/><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="575" x="2351" y="23.5625">CU 36 Consultar seguimiento de bolsines - Vista estática de diseño (patrón Adapter)</text><!--MD5=[98cb02b1beed8d6d9621b4d489e5f281]
+class PantallaConsultarSeguimientoBolsines--><g id="elem_PantallaConsultarSeguimientoBolsines"><rect codeLine="24" fill="#FFFFFF" height="684.2188" id="PantallaConsultarSeguimientoBolsines" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="754" x="7" y="345.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="68" x="350" y="362.5645">«boundary»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="248" x="260" y="379.0215">PantallaConsultarSeguimientoBolsines</text><line style="stroke:#17243B;stroke-width:0.5;" x1="8" x2="760" y1="387.3984" y2="387.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="266" x="13" y="404.9609">-lblCMUsuario : HTMLParagraphElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="254" x="13" y="421.9004">-lblResumen : HTMLParagraphElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="204" x="13" y="438.8398">-frmFiltros : HTMLFormElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="216" x="13" y="455.7793">-txtPrecinto : HTMLInputElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="252" x="13" y="472.7188">-cmbCMDestino : HTMLSelectElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="254" x="13" y="489.6582">-btnQuitarFiltros : HTMLButtonElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="201" x="13" y="506.5977">-lblMensaje : HTMLDivElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="273" x="13" y="523.5371">-lstBolsinesUbicados : HTMLUListElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="296" x="13" y="540.4766">-lstBolsinesSinUbicacion : HTMLUListElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="224" x="13" y="557.416">-pnlSinBolsines : HTMLDivElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="233" x="13" y="574.3555">-btnCancelar : HTMLButtonElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="302" x="13" y="591.2949">-dlgConfirmacionCorreo : HTMLDialogElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="240" x="13" y="608.2344">-lblPregunta : HTMLHeadingElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="259" x="13" y="625.1738">-btnEnviarCorreo : HTMLButtonElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="234" x="13" y="642.1133">-btnNoEnviar : HTMLButtonElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="237" x="13" y="659.0527">-dlgResultado : HTMLDialogElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="229" x="13" y="675.9922">-btnFinalizar : HTMLButtonElement</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="144" x="13" y="692.9316">-mapa : InterfazMapa</text><line style="stroke:#17243B;stroke-width:0.5;" x1="8" x2="760" y1="700.3086" y2="700.3086"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="397" x="13" y="717.8711">+opcionConsultarSeguimientoBolsines() : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="572" x="13" y="734.8105">+tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="411" x="13" y="751.75">+tomarSeleccionBolsin(numeroBolsin : int) : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="481" x="13" y="768.6895">+tomarConfirmacionEnvioCorreo(confirma : boolean) : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="259" x="13" y="785.6289">+opcionCancelar() : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="378" x="13" y="802.5684">-ejecutar(accion : Supplier&lt;Object&gt;) : ResponseEntity&lt;?&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="163" x="13" y="819.5078">+habilitarPantalla() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="604" x="13" y="836.4473">+mostrarResultado(resultado : ResultadoSeguimientoDTO, esConsultaInicial : boolean) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="430" x="13" y="853.3867">+mostrarCMUsuario(resultado : ResultadoSeguimientoDTO) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="418" x="13" y="870.3262">+mostrarResumen(resultado : ResultadoSeguimientoDTO) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="416" x="13" y="887.2656">+cargarOpcionesCMDestino(cms : List&lt;OpcionCMDTO&gt;) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="490" x="13" y="904.2051">+mostrarSinBolsinesEnviados(resultado : ResultadoSeguimientoDTO) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="742" x="13" y="921.1445">+mostrarBolsinesEnLista(ubicados : List&lt;BolsinUbicadoDTO&gt;, sinUbicacion : List&lt;BolsinSinUbicacionDTO&gt;) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="445" x="13" y="938.084">+mostrarBolsinesEnMapa(bolsines : List&lt;BolsinUbicadoDTO&gt;) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="333" x="13" y="955.0234">+mostrarMensaje(texto : String, tipo : String) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="136" x="13" y="971.9629">+quitarFiltros() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="245" x="13" y="988.9023">+marcarSeleccion(numero : int) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="507" x="13" y="1005.8418">+solicitarConfirmacionEnvioCorreo(consulta : ConsultaEnvioCorreoDTO) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="441" x="13" y="1022.7813">+informarEnvioExitoso(resultado : ResultadoNotificacionDTO) : void</text></g><!--MD5=[98087e16a2931929573b255902139d5d]
+class InterfazMapa--><g id="elem_InterfazMapa"><rect codeLine="64" fill="#FFFFFF" height="125.2168" id="InterfazMapa" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="566" x="905.5" y="413.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="68" x="1154.5" y="430.0645">«boundary»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="89" x="1144" y="446.5215">InterfazMapa</text><line style="stroke:#17243B;stroke-width:0.5;" x1="906.5" x2="1470.5" y1="454.8984" y2="454.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="186" x="911.5" y="472.4609">-googleMapsApiKey : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="906.5" x2="1470.5" y1="479.8379" y2="479.8379"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="345" x="911.5" y="497.4004">+obtenerConfiguracionMapa() : Map&lt;String, String&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="554" x="911.5" y="514.3398">+mostrarBolsines(bolsines : List&lt;BolsinUbicadoDTO&gt;, alSeleccionar : Function) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="185" x="911.5" y="531.2793">+resaltar(numero : int) : void</text></g><!--MD5=[e781aed746251af8d8b8ef17e483ebd9]
+class InterfazCorreoElectronico--><g id="elem_InterfazCorreoElectronico"><rect codeLine="71" fill="#FFFFFF" height="125.2168" id="InterfazCorreoElectronico" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="502" x="3055" y="1461.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="68" x="3272" y="1478.0645">«boundary»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="167" x="3222.5" y="1494.5215">InterfazCorreoElectronico</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3056" x2="3556" y1="1502.8984" y2="1502.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="139" x="3061" y="1520.4609">-carpetaSalida : Path</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="119" x="3061" y="1537.4004">-remitente : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3056" x2="3556" y1="1544.7773" y2="1544.7773"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="490" x="3061" y="1562.3398">+enviarCorreo(destinatario : String, asunto : String, cuerpo : String) : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="265" x="3061" y="1579.2793">-codificarAsunto(asunto : String) : String</text></g><g id="elem_GMN5"><path d="M990.5,578.9395 L990.5,626.9395 L761.22,630.9395 L990.5,634.9395 L990.5,683.3164 A0,0 0 0 0 990.5,683.3164 L1386.5,683.3164 A0,0 0 0 0 1386.5,683.3164 L1386.5,588.9395 L1376.5,578.9395 L990.5,578.9395 A0,0 0 0 0 990.5,578.9395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M1376.5,578.9395 L1376.5,588.9395 L1386.5,588.9395 L1376.5,578.9395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="360" x="996.5" y="596.5332">En la web la Pantalla se implementa en dos partes: la vista</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="375" x="996.5" y="612.2627">(seguimiento.html + seguimiento.js), con sus controles y los</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="353" x="996.5" y="627.9922">métodos mostrar.../solicitar..., y la clase Java, que recibe</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="357" x="996.5" y="643.7217">cada acción del usuario (opcion.../tomar...) y se la pasa al</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="327" x="996.5" y="659.4512">gestor. Se muestran los controles principales; la lista</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="297" x="996.5" y="675.1807">completa está en el objeto ui de seguimiento.js.</text></g><g id="elem_GMN8"><path d="M2064,431.4395 L2064,471.9395 L1471.82,475.9395 L2064,479.9395 L2064,520.0869 A0,0 0 0 0 2064,520.0869 L2412,520.0869 A0,0 0 0 0 2412,520.0869 L2412,441.4395 L2402,431.4395 L2064,431.4395 A0,0 0 0 0 2064,431.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M2402,431.4395 L2402,441.4395 L2412,441.4395 L2402,431.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="275" x="2070" y="449.0332">La API key de Google Maps es atributo de la</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="327" x="2070" y="464.7627">InterfazMapa porque sólo el mapa la usa (cohesión).</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="299" x="2070" y="480.4922">La parte Java entrega la configuración y mapa.js</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="290" x="2070" y="496.2217">dibuja con Google Maps (si hay API key) o con</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="161" x="2070" y="511.9512">Leaflet + OpenStreetMap.</text></g><!--MD5=[ac1700a40e0fa9273c6ac8ca6d31299a]
+class GestorConsultarSeguimientoBolsines--><g id="elem_GestorConsultarSeguimientoBolsines"><rect codeLine="98" fill="#FFFFFF" height="531.7637" id="GestorConsultarSeguimientoBolsines" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="715" x="831" y="1022.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="54" x="1161.5" y="1039.5645">«control»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="239" x="1069" y="1056.0215">GestorConsultarSeguimientoBolsines</text><line style="stroke:#17243B;stroke-width:0.5;" x1="832" x2="1545" y1="1064.3984" y2="1064.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="151" x="837" y="1081.9609">-sesion : SesionUsuario</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="234" x="837" y="1098.9004">-bolsinRepository : BolsinRepository</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="288" x="837" y="1115.8398">-empleadoRepository : EmpleadoRepository</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="383" x="837" y="1132.7793">-gestorNotificarUbicacion : GestorNotificarUbicacionBolsin</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="422" x="837" y="1149.7188">-adaptadoresPorModelo : Map&lt;String, IAdaptadorGPSTracker&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="261" x="837" y="1166.6582">-cmUsuarioLogueado : ComisionMedica</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="209" x="837" y="1183.5977">-bolsinesEnviados : List&lt;Bolsin&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="362" x="837" y="1200.5371">-ubicacionesPorBolsin : Map&lt;Integer, UbicacionBolsin&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="296" x="837" y="1217.4766">-motivosSinUbicacion : Map&lt;Integer, String&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="182" x="837" y="1234.416">-bolsinSeleccionado : Bolsin</text><line style="stroke:#17243B;stroke-width:0.5;" x1="832" x2="1545" y1="1241.793" y2="1241.793"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="394" x="837" y="1259.3555">+opcionConsultarSeguimiento() : ResultadoSeguimientoDTO</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="239" x="837" y="1276.2949">-buscarCMUsuarioLogueado() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="213" x="837" y="1293.2344">-buscarBolsinesEnviados() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="278" x="837" y="1310.1738">-solicitarUbicacionesAlGPSTracker() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="403" x="837" y="1327.1133">-obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="622" x="837" y="1344.0527">+tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResultadoSeguimientoDTO</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="451" x="837" y="1360.9922">+tomarSeleccionBolsin(numeroBolsin : int) : ConsultaEnvioCorreoDTO</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="528" x="837" y="1377.9316">+tomarConfirmacionEnvioCorreo(confirma : boolean) : ResultadoNotificacionDTO</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="228" x="837" y="1394.8711">-buscarEmailGCMDestino() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="135" x="837" y="1411.8105">+cancelarCU() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="95" x="837" y="1428.75">+finCU() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="703" x="837" y="1445.6895">-armarResultado(bolsines : List&lt;Bolsin&gt;, mensaje : String, tipoMensaje : String) : ResultadoSeguimientoDTO</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="341" x="837" y="1462.6289">-armarOpcionesCMDestino() : List&lt;OpcionCMDTO&gt;</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="206" x="837" y="1479.5684">-mensajeSinUbicacion() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="232" x="837" y="1496.5078">-tipoMensajeSinUbicacion() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="316" x="837" y="1513.4473">-buscarBolsinEnviado(numeroBolsin : int) : Bolsin</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="217" x="837" y="1530.3867">-verificarConsultaIniciada() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="161" x="837" y="1547.3262">-limpiarEjecucion() : void</text></g><!--MD5=[a73dbffff4394e05a62db5a9d105a3d5]
+class SesionUsuario--><g id="elem_SesionUsuario"><rect codeLine="129" fill="#FFFFFF" height="159.0957" id="SesionUsuario" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="290" x="2093" y="612.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="54" x="2211" y="629.0645">«control»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="92" x="2192" y="645.5215">SesionUsuario</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2094" x2="2382" y1="653.8984" y2="653.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="214" x="2099" y="671.4609">-empleadoLogueado : Empleado</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2094" x2="2382" y1="678.8379" y2="678.8379"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="239" x="2099" y="696.4004">+iniciar(empleado : Empleado) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="98" x="2099" y="713.3398">+cerrar() : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="162" x="2099" y="730.2793">+estaIniciada() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="278" x="2099" y="747.2188">+obtenerEmpleadoLogueado() : Empleado</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="240" x="2099" y="764.1582">+esEncargadoDeBolsines() : boolean</text></g><!--MD5=[4197316cdb2a472da7286f66c95da057]
+class GestorNotificarUbicacionBolsin--><g id="elem_GestorNotificarUbicacionBolsin"><rect codeLine="138" fill="#FFFFFF" height="91.3379" id="GestorNotificarUbicacionBolsin" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="1244" x="1616" y="1469.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="54" x="2211" y="1486.0645">«control»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="202" x="2137" y="1502.5215">GestorNotificarUbicacionBolsin</text><line style="stroke:#17243B;stroke-width:0.5;" x1="1617" x2="2859" y1="1510.8984" y2="1510.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="279" x="1622" y="1528.4609">-interfazCorreo : InterfazCorreoElectronico</text><line style="stroke:#17243B;stroke-width:0.5;" x1="1617" x2="2859" y1="1535.8379" y2="1535.8379"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="1232" x="1622" y="1553.4004">+notificarUbicacionBolsin(emailDestinatario : String, nombreCMDestino : String, numeroBolsin : int, fechaHoraUltimaActualizacion : LocalDateTime, latitud : double, longitud : double) : String</text></g><g id="elem_NotaAlcance"><path d="M178,43.9395 L178,305.6113 L590,305.6113 L590,53.9395 L580,43.9395 L178,43.9395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M580,43.9395 L580,53.9395 L590,53.9395 L580,43.9395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="341" x="184" y="61.5332">Esta vista incluye los atributos y métodos de diseño de</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="375" x="184" y="77.2627">la implementación, y no sólo los usados en la vista dinámica.</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="364" x="184" y="92.9922">Los métodos de los flujos alternativos (filtros, cancelación,</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="375" x="184" y="108.7217">cierre de sesión, errores de formato) no tienen diagrama de</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="376" x="184" y="124.4512">secuencia propio. new() representa al constructor de Java y</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="375" x="184" y="140.1807">se dibuja sólo en UbicacionBolsin, la clase que se crea en la</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="90" x="184" y="155.9102">vista dinámica.</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="4" x="184" y="171.6396"> </text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="362" x="184" y="187.3691">Se omiten los detalles técnicos de la implementación web:</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="369" x="184" y="203.0986">las clases DTO (objetos que sólo transportan datos entre el</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="369" x="184" y="218.8281">gestor y la vista; en las firmas se usan como tipos de dato),</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="325" x="184" y="234.5576">el cliente HTTP que usan los servicios, las clases de</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="314" x="184" y="250.2871">excepción, las constantes (atributos estáticos), los</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="391" x="184" y="266.0166">constructores y métodos de búsqueda (@Lookup) con los que</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="361" x="184" y="281.7461">Spring entrega las dependencias, toString() y el id técnico</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="48" x="184" y="297.4756">de JPA.</text></g><!--MD5=[44f7589f17701d22027c6e67e004dafd]
+class IAdaptadorGPSTracker--><g id="elem_IAdaptadorGPSTracker"><rect codeLine="148" fill="#FFFFFF" height="91.3379" id="IAdaptadorGPSTracker" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="724" x="1876" y="1813.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="2205.5" y="1830.0645">«interface»</text><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="157" x="2159.5" y="1846.5215">IAdaptadorGPSTracker</text><line style="stroke:#17243B;stroke-width:0.5;" x1="1877" x2="2599" y1="1854.8984" y2="1854.8984"/><line style="stroke:#17243B;stroke-width:0.5;" x1="1877" x2="2599" y1="1862.8984" y2="1862.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="141" x="1882" y="1880.4609">+getModelo() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="712" x="1882" y="1897.4004">+obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin</text></g><!--MD5=[753d5a2068e380295914cbc0b54cc904]
+class AdaptadorGPSTrackerXTR4500L--><g id="elem_AdaptadorGPSTrackerXTR4500L"><rect codeLine="153" fill="#FFFFFF" height="144.5762" id="AdaptadorGPSTrackerXTR4500L" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="724" x="2944" y="2044.4395"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="222" x="3195" y="2063.002">AdaptadorGPSTrackerXTR4500L</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="2071.3789" y2="2071.3789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="343" x="2950" y="2088.9414">-servicioXTR4500L : ServicioGPSTrackerXTR4500L</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="102" x="2950" y="2105.8809">-apiKey : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="207" x="2950" y="2122.8203">-objectMapper : ObjectMapper</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="2130.1973" y2="2130.1973"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="141" x="2950" y="2147.7598">+getModelo() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="712" x="2950" y="2164.6992">+obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="431" x="2950" y="2181.6387">-interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin</text></g><!--MD5=[d901b160adc087fd0147ff89e8300a33]
+class AdaptadorGPSTrackerNavTrackQX7A--><g id="elem_AdaptadorGPSTrackerNavTrackQX7A"><rect codeLine="162" fill="#FFFFFF" height="127.6367" id="AdaptadorGPSTrackerNavTrackQX7A" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="724" x="2944" y="1626.9395"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="254" x="3179" y="1645.502">AdaptadorGPSTrackerNavTrackQX7A</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="1653.8789" y2="1653.8789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="407" x="2950" y="1671.4414">-servicioNavTrackQX7A : ServicioGPSTrackerNavTrackQX7A</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="102" x="2950" y="1688.3809">-apiKey : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="1695.7578" y2="1695.7578"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="141" x="2950" y="1713.3203">+getModelo() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="712" x="2950" y="1730.2598">+obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="449" x="2950" y="1747.1992">-interpretarTexto(datos : String, numeroBolsin : int) : UbicacionBolsin</text></g><!--MD5=[a45fce653eb8ccf884fd808b9a763b5b]
+class AdaptadorGPSTrackerGeoPulseMTR900--><g id="elem_AdaptadorGPSTrackerGeoPulseMTR900"><rect codeLine="170" fill="#FFFFFF" height="127.6367" id="AdaptadorGPSTrackerGeoPulseMTR900" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="724" x="2944" y="1794.9395"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="269" x="3171.5" y="1813.502">AdaptadorGPSTrackerGeoPulseMTR900</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="1821.8789" y2="1821.8789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="437" x="2950" y="1839.4414">-servicioGeoPulseMTR900 : ServicioGPSTrackerGeoPulseMTR900</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="102" x="2950" y="1856.3809">-apiKey : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2945" x2="3667" y1="1863.7578" y2="1863.7578"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="141" x="2950" y="1881.3203">+getModelo() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="712" x="2950" y="1898.2598">+obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="482" x="2950" y="1915.1992">-interpretarMatriz(matriz : Object[][], numeroBolsin : int) : UbicacionBolsin</text></g><!--MD5=[686a90923fef74e22263f7ef1a041beb]
+class ServicioGPSTrackerXTR4500L--><g id="elem_ServicioGPSTrackerXTR4500L"><rect codeLine="178" fill="#FFFFFF" height="91.3379" id="ServicioGPSTrackerXTR4500L" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="673" x="3766" y="2071.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="70" x="4067.5" y="2088.0645">«adaptable»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="203" x="4001" y="2104.5215">ServicioGPSTrackerXTR4500L</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3767" x2="4438" y1="2112.8984" y2="2112.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="105" x="3772" y="2130.4609">-urlBase : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3767" x2="4438" y1="2137.8379" y2="2137.8379"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="661" x="3772" y="2155.4004">+getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String</text></g><!--MD5=[529cd1da738903b0c750616cfd978151]
+class ServicioGPSTrackerNavTrackQX7A--><g id="elem_ServicioGPSTrackerNavTrackQX7A"><rect codeLine="183" fill="#FFFFFF" height="91.3379" id="ServicioGPSTrackerNavTrackQX7A" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="701" x="3752" y="1645.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="70" x="4067.5" y="1662.0645">«adaptable»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="235" x="3985" y="1678.5215">ServicioGPSTrackerNavTrackQX7A</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3753" x2="4452" y1="1686.8984" y2="1686.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="105" x="3758" y="1704.4609">-urlBase : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3753" x2="4452" y1="1711.8379" y2="1711.8379"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="689" x="3758" y="1729.4004">+retrieveTrackingData(apiKey : String, numeroBolsin : int, codigoComisionMedicaDestino : String) : String</text></g><!--MD5=[f12fb9cce4086839234b2edd317edf55]
+class ServicioGPSTrackerGeoPulseMTR900--><g id="elem_ServicioGPSTrackerGeoPulseMTR900"><rect codeLine="188" fill="#FFFFFF" height="108.2773" id="ServicioGPSTrackerGeoPulseMTR900" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="458" x="3873.5" y="1804.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="70" x="4067.5" y="1821.5645">«adaptable»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="250" x="3977.5" y="1838.0215">ServicioGPSTrackerGeoPulseMTR900</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3874.5" x2="4330.5" y1="1846.3984" y2="1846.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="105" x="3879.5" y="1863.9609">-urlBase : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="207" x="3879.5" y="1880.9004">-objectMapper : ObjectMapper</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3874.5" x2="4330.5" y1="1888.2773" y2="1888.2773"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="446" x="3879.5" y="1905.8398">+fetchCargoPositions(apiKey : String, numeroBolsin : int) : Object[][]</text></g><!--MD5=[69bdddce64dad240361dd0f25f7cd4b5]
+class UbicacionBolsin--><g id="elem_UbicacionBolsin"><rect codeLine="194" fill="#FFFFFF" height="195.3945" id="UbicacionBolsin" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="752" x="2930" y="2229.4395"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="103" x="3254.5" y="2248.002">UbicacionBolsin</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2931" x2="3681" y1="2256.3789" y2="2256.3789"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="121" x="2936" y="2273.9414">-numeroBolsin : int</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="104" x="2936" y="2290.8809">-latitud : double</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="116" x="2936" y="2307.8203">-longitud : double</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="313" x="2936" y="2324.7598">-fechaHoraUltimaActualizacion : LocalDateTime</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2931" x2="3681" y1="2332.1367" y2="2332.1367"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="740" x="2936" y="2349.6992">+new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime) : void</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="159" x="2936" y="2366.6387">+getNumeroBolsin() : int</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="144" x="2936" y="2383.5781">+getLatitud() : double</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="156" x="2936" y="2400.5176">+getLongitud() : double</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="351" x="2936" y="2417.457">+getFechaHoraUltimaActualizacion() : LocalDateTime</text></g><g id="elem_GMN23"><path d="M3199.5,1963.4395 L3199.5,2004.8984 L3412.5,2004.8984 L3412.5,1973.4395 L3402.5,1963.4395 L3199.5,1963.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M3402.5,1963.4395 L3402.5,1973.4395 L3412.5,1973.4395 L3402.5,1963.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="55" x="3205.5" y="1981.0332">Objetivo</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="105" x="3264.5" y="1981.0332">(Target): la única</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="192" x="3205.5" y="1996.7627">interfaz que conoce el Cliente.</text></g><g id="elem_GMN26"><path d="M2102,1944.4395 L2102,2017.3574 L2374,2017.3574 L2374,1954.4395 L2364,1944.4395 L2102,1944.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M2364,1944.4395 L2364,1954.4395 L2374,1954.4395 L2364,1944.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="47" x="2108" y="1962.0332">Cliente</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="204" x="2155" y="1962.0332">: con obtenerAdaptador(modelo)</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="242" x="2108" y="1977.7627">elige el adaptador según el modelo del</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="237" x="2108" y="1993.4922">GPSTracker del bolsín y siempre llama</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="135" x="2108" y="2009.2217">a obtenerUbicacion().</text></g><g id="elem_GMN29"><path d="M4547.5,2088.4395 L4547.5,2112.9395 L4439.23,2116.9395 L4547.5,2120.9395 L4547.5,2145.6279 A0,0 0 0 0 4547.5,2145.6279 L4874.5,2145.6279 A0,0 0 0 0 4874.5,2145.6279 L4874.5,2098.4395 L4864.5,2088.4395 L4547.5,2088.4395 A0,0 0 0 0 4547.5,2088.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M4864.5,2088.4395 L4864.5,2098.4395 L4874.5,2098.4395 L4864.5,2088.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="74" x="4553.5" y="2106.0332">Adaptables</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="224" x="4631.5" y="2106.0332">(Adaptee): API de cada modelo, con</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="306" x="4553.5" y="2121.7627">nombres, parámetros y respuestas incompatibles</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="279" x="4553.5" y="2137.4922">(JSON en String / String con comas / matriz).</text></g><!--MD5=[d0df54d1ec013445548d1d37612aac18]
+class Bolsin--><g id="elem_Bolsin"><rect codeLine="225" fill="#FFFFFF" height="294.6113" id="Bolsin" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="420" x="3096" y="1043.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="3283" y="1060.0645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="38" x="3287" y="1076.5215">Bolsin</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3097" x2="3515" y1="1084.8984" y2="1084.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="152" x="3102" y="1102.4609">-numeroBolsin : Integer</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="168" x="3102" y="1119.4004">-numeroPrecinto : Integer</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="121" x="3102" y="1136.3398">-fecha : LocalDate</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="96" x="3102" y="1153.2793">-peso : Double</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3097" x2="3515" y1="1160.6563" y2="1160.6563"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="408" x="3102" y="1178.2188">+esTuCMOrigen(comisionMedica : ComisionMedica) : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="157" x="3102" y="1195.1582">+sosEnviado() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="190" x="3102" y="1212.0977">+getNumeroBolsin() : Integer</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="178" x="3102" y="1229.0371">+getNroPrecinto() : Integer</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="262" x="3102" y="1245.9766">+obtenerCMDestino() : ComisionMedica</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="235" x="3102" y="1262.916">+obtenerCodigoCMOrigen() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="240" x="3102" y="1279.8555">+obtenerCodigoCMDestino() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="251" x="3102" y="1296.7949">+conocerModeloGPSTracker() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="286" x="3102" y="1313.7344">+tenesPrecinto(precinto : Integer) : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="310" x="3102" y="1330.6738">+tenesCMDestino(codigoCM : String) : boolean</text></g><!--MD5=[9fc9b07eb90d7cd1a21dbeb74ea5d624]
+class GPSTracker--><g id="elem_GPSTracker"><rect codeLine="242" fill="#FFFFFF" height="108.2773" id="GPSTracker" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="153" x="4026" y="1265.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="4079.5" y="1282.5645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="79" x="4063" y="1299.0215">GPSTracker</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4027" x2="4178" y1="1307.3984" y2="1307.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="139" x="4032" y="1324.9609">-numeroSerie : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="105" x="4032" y="1341.9004">-modelo : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4027" x2="4178" y1="1349.2773" y2="1349.2773"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="141" x="4032" y="1366.8398">+getModelo() : String</text></g><!--MD5=[abcb614cd5cd0d597a18d620069973e8]
+class ComisionMedica--><g id="elem_ComisionMedica"><rect codeLine="248" fill="#FFFFFF" height="192.9746" id="ComisionMedica" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="315" x="4969" y="1088.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="5103.5" y="1105.0645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="108" x="5072.5" y="1121.5215">ComisionMedica</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4970" x2="5283" y1="1129.8984" y2="1129.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="102" x="4975" y="1147.4609">-codigo : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="107" x="4975" y="1164.4004">-nombre : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="117" x="4975" y="1181.3398">-direccion : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="91" x="4975" y="1198.2793">-email : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="110" x="4975" y="1215.2188">-telefono : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4970" x2="5283" y1="1222.5957" y2="1222.5957"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="303" x="4975" y="1240.1582">+esLaMisma(otra : ComisionMedica) : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="139" x="4975" y="1257.0977">+getCodigo() : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="145" x="4975" y="1274.0371">+getNombre() : String</text></g><!--MD5=[d1c0d31ce5b07da8e5c93bcc3ccb194f]
+class CambioEstadoBolsin--><g id="elem_CambioEstadoBolsin"><rect codeLine="259" fill="#FFFFFF" height="125.2168" id="CambioEstadoBolsin" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="230" x="3987.5" y="978.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="4079.5" y="995.0645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="133" x="4036" y="1011.5215">CambioEstadoBolsin</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3988.5" x2="4216.5" y1="1019.8984" y2="1019.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="218" x="3993.5" y="1037.4609">-fechaHoraInicio : LocalDateTime</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="203" x="3993.5" y="1054.4004">-fechaHoraFin : LocalDateTime</text><line style="stroke:#17243B;stroke-width:0.5;" x1="3988.5" x2="4216.5" y1="1061.7773" y2="1061.7773"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="147" x="3993.5" y="1079.3398">+sosActual() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="157" x="3993.5" y="1096.2793">+sosEnviado() : boolean</text></g><!--MD5=[d8933eb2ae217ae3c21bf6e2973c277f]
+class Estado--><g id="elem_Estado"><rect codeLine="266" fill="#FFFFFF" height="142.1563" id="Estado" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="195" x="4613.5" y="961.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="4688" y="978.5645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="45" x="4688.5" y="995.0215">Estado</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4614.5" x2="4807.5" y1="1003.3984" y2="1003.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="102" x="4619.5" y="1020.9609">-ambito : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="107" x="4619.5" y="1037.9004">-nombre : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="133" x="4619.5" y="1054.8398">-descripcion : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4614.5" x2="4807.5" y1="1062.2168" y2="1062.2168"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="183" x="4619.5" y="1079.7793">+esAmbitoBolsin() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="150" x="4619.5" y="1096.7188">+esEnviado() : boolean</text></g><!--MD5=[267282629f1778b9c75091f9d8fe6097]
+class Empleado--><g id="elem_Empleado"><rect codeLine="274" fill="#FFFFFF" height="192.9746" id="Empleado" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="376" x="4523" y="728.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="4688" y="745.0645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="65" x="4678.5" y="761.5215">Empleado</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4524" x2="4898" y1="769.8984" y2="769.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="107" x="4529" y="787.4609">-nombre : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="108" x="4529" y="804.4004">-apellido : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="91" x="4529" y="821.3398">-email : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="4524" x2="4898" y1="828.7168" y2="828.7168"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="184" x="4529" y="846.2793">+getCM() : ComisionMedica</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="364" x="4529" y="863.2188">+esTuCM(comisionMedica : ComisionMedica) : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="138" x="4529" y="880.1582">+sosGCM() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="247" x="4529" y="897.0977">+sosEncargadoDeBolsines() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="126" x="4529" y="914.0371">+getEmail() : String</text></g><!--MD5=[54736e807c59b9b647b6e830d606a429]
+class Rol--><g id="elem_Rol"><rect codeLine="285" fill="#FFFFFF" height="125.2168" id="Rol" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="252" x="5000.5" y="762.4395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="5103.5" y="779.0645">«entity»</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="20" x="5116.5" y="795.5215">Rol</text><line style="stroke:#17243B;stroke-width:0.5;" x1="5001.5" x2="5251.5" y1="803.8984" y2="803.8984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="107" x="5006.5" y="821.4609">-nombre : String</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="133" x="5006.5" y="838.4004">-descripcion : String</text><line style="stroke:#17243B;stroke-width:0.5;" x1="5001.5" x2="5251.5" y1="845.7773" y2="845.7773"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="131" x="5006.5" y="863.3398">+esGCM() : boolean</text><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="240" x="5006.5" y="880.2793">+esEncargadoDeBolsines() : boolean</text></g><g id="elem_GMN39"><path d="M4568,1299.4395 L4568,1315.9395 L4179.26,1319.9395 L4568,1323.9395 L4568,1340.8984 A0,0 0 0 0 4568,1340.8984 L4854,1340.8984 A0,0 0 0 0 4854,1340.8984 L4854,1309.4395 L4844,1299.4395 L4568,1299.4395 A0,0 0 0 0 4568,1299.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M4844,1299.4395 L4844,1309.4395 L4854,1309.4395 L4844,1299.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="236" x="4574" y="1317.0332">Clase agregada al Modelo de Dominio</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="265" x="4574" y="1332.7627">(RNF 6: cada bolsín tiene su GPS Tracker).</text></g><!--MD5=[bd7e1c033516f1a6d490c8fc4138d95b]
+class BolsinRepository--><g id="elem_BolsinRepository"><rect codeLine="300" fill="#FFFFFF" height="74.3984" id="BolsinRepository" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="163" x="2156.5" y="1153.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="2205.5" y="1170.5645">«interface»</text><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="108" x="2184" y="1187.0215">BolsinRepository</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2157.5" x2="2318.5" y1="1195.3984" y2="1195.3984"/><line style="stroke:#17243B;stroke-width:0.5;" x1="2157.5" x2="2318.5" y1="1203.3984" y2="1203.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="151" x="2162.5" y="1220.9609">+findAll() : List&lt;Bolsin&gt;</text></g><!--MD5=[e42dea92abc073aa58e30186505cdea2]
+class EmpleadoRepository--><g id="elem_EmpleadoRepository"><rect codeLine="303" fill="#FFFFFF" height="74.3984" id="EmpleadoRepository" rx="2.5" ry="2.5" style="stroke:#17243B;stroke-width:0.5;" width="190" x="2143" y="944.9395"/><text fill="#000000" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="2205.5" y="961.5645">«interface»</text><text fill="#000000" font-family="Arial" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="136" x="2170" y="978.0215">EmpleadoRepository</text><line style="stroke:#17243B;stroke-width:0.5;" x1="2144" x2="2332" y1="986.3984" y2="986.3984"/><line style="stroke:#17243B;stroke-width:0.5;" x1="2144" x2="2332" y1="994.3984" y2="994.3984"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacing" textLength="178" x="2149" y="1011.9609">+findAll() : List&lt;Empleado&gt;</text></g><g id="elem_GMN44"><path d="M3159,879.4395 L3159,920.8984 L3453,920.8984 L3453,889.4395 L3443,879.4395 L3159,879.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:0.5;"/><path d="M3443,879.4395 L3443,889.4395 L3453,889.4395 L3443,879.4395 " fill="#FFF7DC" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="261" x="3165" y="897.0332">Extienden JpaRepository: Spring Data JPA</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="273" x="3165" y="912.7627">genera la implementación (H2 + Hibernate).</text></g><!--MD5=[4cbe10af6a3ffa4c7cd55ccd64113190]
+link IAdaptadorGPSTracker to GMN23--><g id="link_IAdaptadorGPSTracker_GMN23"><path d="M2525,1904.7795 C2525,1940.4495 2525,1983.9395 2525,1983.9395 C2525,1983.9395 2985.73,1983.9395 3199.45,1983.9395 " fill="none" id="IAdaptadorGPSTracker-GMN23" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[ce9f75d59f9b4fee41004df7b3891b6b]
+link GestorConsultarSeguimientoBolsines to GMN26--><g id="link_GestorConsultarSeguimientoBolsines_GMN26"><path d="M1070,1554.9995 C1070,1750.0395 1070,1980.9395 1070,1980.9395 C1070,1980.9395 1793.62,1980.9395 2101.73,1980.9395 " fill="none" id="GestorConsultarSeguimientoBolsines-GMN26" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[ce7143b65f317d5c2ec7f62b91d7f714]
+link EmpleadoRepository to GMN44--><g id="link_EmpleadoRepository_GMN44"><path d="M2238,944.7795 C2238,923.0795 2238,899.9395 2238,899.9395 C2238,899.9395 2866.04,899.9395 3158.9,899.9395 " fill="none" id="EmpleadoRepository-GMN44" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[f7af918cfcc1dd8f6a1359ea0252db50]
+link PantallaConsultarSeguimientoBolsines to GestorConsultarSeguimientoBolsines--><g id="link_PantallaConsultarSeguimientoBolsines_GestorConsultarSeguimientoBolsines"><path codeLine="316" d="M761.22,1026.4395 C761.22,1026.4395 825.78,1026.4395 825.78,1026.4395 " fill="none" id="PantallaConsultarSeguimientoBolsines-to-GestorConsultarSeguimientoBolsines" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="830.78,1026.4395,821.78,1022.4395,825.78,1026.4395,821.78,1030.4395,830.78,1026.4395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[3d95f947be12f09adb5a9b16ee20a8ad]
+link PantallaConsultarSeguimientoBolsines to SesionUsuario--><g id="link_PantallaConsultarSeguimientoBolsines_SesionUsuario"><path codeLine="317" d="M761.14,727.1895 C761.14,727.1895 2087.91,727.1895 2087.91,727.1895 " fill="none" id="PantallaConsultarSeguimientoBolsines-to-SesionUsuario" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2092.91,727.1895,2083.91,723.1895,2087.91,727.1895,2083.91,731.1895,2092.91,727.1895" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[94f8adde0e831c1aeed6bb088d46f829]
+link PantallaConsultarSeguimientoBolsines to InterfazMapa--><g id="link_PantallaConsultarSeguimientoBolsines_InterfazMapa"><path codeLine="318" d="M761.22,475.9395 C761.22,475.9395 900.35,475.9395 900.35,475.9395 " fill="none" id="PantallaConsultarSeguimientoBolsines-to-InterfazMapa" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="905.35,475.9395,896.35,471.9395,900.35,475.9395,896.35,479.9395,905.35,475.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[a358b3bb196978b0348303faf3963039]
+link GestorConsultarSeguimientoBolsines to SesionUsuario--><g id="link_GestorConsultarSeguimientoBolsines_SesionUsuario"><path codeLine="320" d="M1546.21,1029.7695 C1808.12,1029.7695 2118,1029.7695 2118,1029.7695 C2118,1029.7695 2118,776.5695 2118,776.5695 " fill="none" id="GestorConsultarSeguimientoBolsines-to-SesionUsuario" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2118,771.5695,2114,780.5695,2118,776.5695,2122,780.5695,2118,771.5695" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[2e54ba00cfac2b525035d94cf6f87aa8]
+link GestorConsultarSeguimientoBolsines to BolsinRepository--><g id="link_GestorConsultarSeguimientoBolsines_BolsinRepository"><path codeLine="321" d="M1546.01,1190.9395 C1546.01,1190.9395 2151.45,1190.9395 2151.45,1190.9395 " fill="none" id="GestorConsultarSeguimientoBolsines-to-BolsinRepository" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2156.45,1190.9395,2147.45,1186.9395,2151.45,1190.9395,2147.45,1194.9395,2156.45,1190.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[ca9ca345a1250333b2f53bc396a68a9f]
+link GestorConsultarSeguimientoBolsines to EmpleadoRepository--><g id="link_GestorConsultarSeguimientoBolsines_EmpleadoRepository"><path codeLine="322" d="M1546.19,1036.6095 C1819.62,1036.6095 2150,1036.6095 2150,1036.6095 C2150,1036.6095 2150,1024.0095 2150,1024.0095 " fill="none" id="GestorConsultarSeguimientoBolsines-to-EmpleadoRepository" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2150,1019.0095,2146,1028.0095,2150,1024.0095,2154,1028.0095,2150,1019.0095" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[c1e4b1e56a52543575085c6e4e53014a]
+link GestorConsultarSeguimientoBolsines to GestorNotificarUbicacionBolsin--><g id="link_GestorConsultarSeguimientoBolsines_GestorNotificarUbicacionBolsin"><path codeLine="323" d="M1546.01,1512.1895 C1546.01,1512.1895 1610.84,1512.1895 1610.84,1512.1895 " fill="none" id="GestorConsultarSeguimientoBolsines-to-GestorNotificarUbicacionBolsin" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="1615.84,1512.1895,1606.84,1508.1895,1610.84,1512.1895,1606.84,1516.1895,1615.84,1512.1895" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[a7d5a4599fd280290f055f4859640215]
+link GestorConsultarSeguimientoBolsines to IAdaptadorGPSTracker--><g id="link_GestorConsultarSeguimientoBolsines_IAdaptadorGPSTracker"><path codeLine="324" d="M1308,1555.1695 C1308,1703.6395 1308,1858.9395 1308,1858.9395 C1308,1858.9395 1870.77,1858.9395 1870.77,1858.9395 " fill="none" id="GestorConsultarSeguimientoBolsines-to-IAdaptadorGPSTracker" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="1875.77,1858.9395,1866.77,1854.9395,1870.77,1858.9395,1866.77,1862.9395,1875.77,1858.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[9c4c1f649d126f1920da7d4bc6e016ad]
+link GestorConsultarSeguimientoBolsines to UbicacionBolsin--><g id="link_GestorConsultarSeguimientoBolsines_UbicacionBolsin"><path codeLine="325" d="M1546.11,1465.4395 C2058.38,1465.4395 2940,1465.4395 2940,1465.4395 C2940,1465.4395 2940,2224.3695 2940,2224.3695 " fill="none" id="GestorConsultarSeguimientoBolsines-to-UbicacionBolsin" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2940,2229.3695,2944,2220.3695,2940,2224.3695,2936,2220.3695,2940,2229.3695" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[f37e44c8c944e636d7cae883a98a943e]
+link GestorConsultarSeguimientoBolsines to Bolsin--><g id="link_GestorConsultarSeguimientoBolsines_Bolsin"><path codeLine="326" d="M1546.21,1098.6895 C1546.21,1098.6895 3090.84,1098.6895 3090.84,1098.6895 " fill="none" id="GestorConsultarSeguimientoBolsines-to-Bolsin" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3095.84,1098.6895,3086.84,1094.6895,3090.84,1098.6895,3086.84,1102.6895,3095.84,1098.6895" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[2e0462ed82d66e43c70d420b52fca8e0]
+link GestorConsultarSeguimientoBolsines to ComisionMedica--><g id="link_GestorConsultarSeguimientoBolsines_ComisionMedica"><path codeLine="327" d="M1546.27,1417.6895 C2516.81,1417.6895 5127,1417.6895 5127,1417.6895 C5127,1417.6895 5127,1286.6195 5127,1286.6195 " fill="none" id="GestorConsultarSeguimientoBolsines-to-ComisionMedica" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="5127,1281.6195,5123,1290.6195,5127,1286.6195,5131,1290.6195,5127,1281.6195" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[fa38b9760eeae113fa2a039c676a3dad]
+link GestorConsultarSeguimientoBolsines to Empleado--><g id="link_GestorConsultarSeguimientoBolsines_Empleado"><path codeLine="328" d="M1509,1022.6795 C1509,919.3795 1509,825.4395 1509,825.4395 C1509,825.4395 4517.95,825.4395 4517.95,825.4395 " fill="none" id="GestorConsultarSeguimientoBolsines-to-Empleado" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="4522.95,825.4395,4513.95,821.4395,4517.95,825.4395,4513.95,829.4395,4522.95,825.4395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[3a5e4ce0b8e0ff4fd89cd772c418565f]
+link GestorNotificarUbicacionBolsin to InterfazCorreoElectronico--><g id="link_GestorNotificarUbicacionBolsin_InterfazCorreoElectronico"><path codeLine="330" d="M2860.03,1514.9395 C2860.03,1514.9395 3049.93,1514.9395 3049.93,1514.9395 " fill="none" id="GestorNotificarUbicacionBolsin-to-InterfazCorreoElectronico" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3054.93,1514.9395,3045.93,1510.9395,3049.93,1514.9395,3045.93,1518.9395,3054.93,1514.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[3019836192656442b65e64c5c8a95eee]
+link SesionUsuario to Empleado--><g id="link_SesionUsuario_Empleado"><path codeLine="331" d="M2383.01,749.9395 C2383.01,749.9395 4517.86,749.9395 4517.86,749.9395 " fill="none" id="SesionUsuario-to-Empleado" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="4522.86,749.9395,4513.86,745.9395,4517.86,749.9395,4513.86,753.9395,4522.86,749.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[fc26aff9a005e352fa22ba8d14d16535]
+link BolsinRepository to Bolsin--><g id="link_BolsinRepository_Bolsin"><path codeLine="332" d="M2319.59,1190.9395 C2319.59,1190.9395 3090.86,1190.9395 3090.86,1190.9395 " fill="none" id="BolsinRepository-to-Bolsin" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3095.86,1190.9395,3086.86,1186.9395,3090.86,1190.9395,3086.86,1194.9395,3095.86,1190.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[66f2d379216bb6a694fef39c4d553a36]
+link EmpleadoRepository to Empleado--><g id="link_EmpleadoRepository_Empleado"><path codeLine="333" d="M2333.29,953.4395 C2766.82,953.4395 4532,953.4395 4532,953.4395 C4532,953.4395 4532,926.6795 4532,926.6795 " fill="none" id="EmpleadoRepository-to-Empleado" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="4532,921.6795,4528,930.6795,4532,926.6795,4536,930.6795,4532,921.6795" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[395caceef0f06d17ae835666b863ef2f]
+reverse link IAdaptadorGPSTracker to AdaptadorGPSTrackerXTR4500L--><g id="link_IAdaptadorGPSTracker_AdaptadorGPSTrackerXTR4500L"><path codeLine="335" d="M2450,1924.4695 C2450,1924.4695 2450,2116.9395 2450,2116.9395 C2450,2116.9395 2710.37,2116.9395 2943.91,2116.9395 " fill="none" id="IAdaptadorGPSTracker-backto-AdaptadorGPSTrackerXTR4500L" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="2443,1924.4695,2450,1904.4695,2457,1924.4695,2443,1924.4695" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[f0667b78ff5170ac4b0e438121fca871]
+reverse link IAdaptadorGPSTracker to AdaptadorGPSTrackerNavTrackQX7A--><g id="link_IAdaptadorGPSTracker_AdaptadorGPSTrackerNavTrackQX7A"><path codeLine="336" d="M2238,1793.0295 C2238,1793.0295 2238,1690.9395 2238,1690.9395 C2238,1690.9395 2633.95,1690.9395 2943.68,1690.9395 " fill="none" id="IAdaptadorGPSTracker-backto-AdaptadorGPSTrackerNavTrackQX7A" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="2245,1793.0295,2238,1813.0295,2231,1793.0295,2245,1793.0295" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[c5a9ad1125e73b491d0357e1c5f69061]
+reverse link IAdaptadorGPSTracker to AdaptadorGPSTrackerGeoPulseMTR900--><g id="link_IAdaptadorGPSTracker_AdaptadorGPSTrackerGeoPulseMTR900"><path codeLine="337" d="M2620.32,1843.7695 C2620.32,1843.7695 2943.91,1843.7695 2943.91,1843.7695 " fill="none" id="IAdaptadorGPSTracker-backto-AdaptadorGPSTrackerGeoPulseMTR900" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="2620.32,1850.7695,2600.32,1843.7695,2620.32,1836.7695,2620.32,1850.7695" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[e73ccb2ee9f4903c86fcecd0b02a413f]
+link AdaptadorGPSTrackerXTR4500L to ServicioGPSTrackerXTR4500L--><g id="link_AdaptadorGPSTrackerXTR4500L_ServicioGPSTrackerXTR4500L"><path codeLine="338" d="M3668.13,2116.9395 C3668.13,2116.9395 3760.92,2116.9395 3760.92,2116.9395 " fill="none" id="AdaptadorGPSTrackerXTR4500L-to-ServicioGPSTrackerXTR4500L" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3765.92,2116.9395,3756.92,2112.9395,3760.92,2116.9395,3756.92,2120.9395,3765.92,2116.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[e53140dea980fb596e1e760d7a29bea9]
+link AdaptadorGPSTrackerNavTrackQX7A to ServicioGPSTrackerNavTrackQX7A--><g id="link_AdaptadorGPSTrackerNavTrackQX7A_ServicioGPSTrackerNavTrackQX7A"><path codeLine="339" d="M3668.13,1690.9395 C3668.13,1690.9395 3746.81,1690.9395 3746.81,1690.9395 " fill="none" id="AdaptadorGPSTrackerNavTrackQX7A-to-ServicioGPSTrackerNavTrackQX7A" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3751.81,1690.9395,3742.81,1686.9395,3746.81,1690.9395,3742.81,1694.9395,3751.81,1690.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[142edf9da7e533ca7950c33c236a8b88]
+link AdaptadorGPSTrackerGeoPulseMTR900 to ServicioGPSTrackerGeoPulseMTR900--><g id="link_AdaptadorGPSTrackerGeoPulseMTR900_ServicioGPSTrackerGeoPulseMTR900"><path codeLine="340" d="M3668.13,1858.9395 C3668.13,1858.9395 3868.22,1858.9395 3868.22,1858.9395 " fill="none" id="AdaptadorGPSTrackerGeoPulseMTR900-to-ServicioGPSTrackerGeoPulseMTR900" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="3873.22,1858.9395,3864.22,1854.9395,3868.22,1858.9395,3864.22,1862.9395,3873.22,1858.9395" style="stroke:#17243B;stroke-width:1.0;"/></g><!--MD5=[b2374310cf1bed6dd5bec1d520221f0f]
+link IAdaptadorGPSTracker to UbicacionBolsin--><g id="link_IAdaptadorGPSTracker_UbicacionBolsin"><path codeLine="341" d="M2600.03,1874.1095 C2769.65,1874.1095 2935,1874.1095 2935,1874.1095 C2935,1874.1095 2935,2224.2395 2935,2224.2395 " fill="none" id="IAdaptadorGPSTracker-to-UbicacionBolsin" style="stroke:#17243B;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#17243B" points="2935,2229.2395,2939,2220.2395,2935,2224.2395,2931,2220.2395,2935,2229.2395" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="55" x="2879" y="1895.2832">«create»</text></g><!--MD5=[d44462ddcdcfac256aabe05e73a84128]
+link Bolsin to ComisionMedica--><g id="link_Bolsin_ComisionMedica"><path codeLine="343" d="M3516.17,1211.9395 C3516.17,1211.9395 4963.99,1211.9395 4963.99,1211.9395 " fill="none" id="Bolsin-to-ComisionMedica" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4968.99,1211.9395,4959.99,1207.9395,4963.99,1211.9395,4959.99,1215.9395,4968.99,1211.9395" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="40" x="4199.08" y="1225.5332">origen</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4956.2395" y="1226.2226">1</text></g><!--MD5=[d44462ddcdcfac256aabe05e73a84128]
+link Bolsin to ComisionMedica--><g id="link_Bolsin_ComisionMedica"><path codeLine="344" d="M3516.17,1157.9395 C3516.17,1157.9395 4963.99,1157.9395 4963.99,1157.9395 " fill="none" id="Bolsin-to-ComisionMedica-1" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4968.99,1157.9395,4959.99,1153.9395,4963.99,1157.9395,4959.99,1161.9395,4968.99,1157.9395" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="46" x="4193.08" y="1171.5332">destino</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4956.2395" y="1169.607">1</text></g><!--MD5=[6ab9160e946821b918fad7543f392f31]
+link Bolsin to CambioEstadoBolsin--><g id="link_Bolsin_CambioEstadoBolsin"><path codeLine="345" d="M3516.05,1073.4395 C3516.05,1073.4395 3982.45,1073.4395 3982.45,1073.4395 " fill="none" id="Bolsin-to-CambioEstadoBolsin" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="3987.45,1073.4395,3978.45,1069.4395,3982.45,1073.4395,3978.45,1077.4395,3987.45,1073.4395" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="86" x="3662.25" y="1087.0332">cambioEstado</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="20" x="3959.439" y="1088.6121">1..*</text></g><!--MD5=[9d94226846d7be121dc8322d701e94d6]
+link Bolsin to GPSTracker--><g id="link_Bolsin_GPSTracker"><path codeLine="346" d="M3516.05,1302.1895 C3516.05,1302.1895 4020.88,1302.1895 4020.88,1302.1895 " fill="none" id="Bolsin-to-GPSTracker" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4025.88,1302.1895,4016.88,1298.1895,4020.88,1302.1895,4016.88,1306.1895,4025.88,1302.1895" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="70" x="3697.47" y="1315.7832">gpsTracker</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4013.0916" y="1313.7965">1</text></g><!--MD5=[22e3e07fcb5e0b871c4d71ad1332c167]
+link CambioEstadoBolsin to Estado--><g id="link_CambioEstadoBolsin_Estado"><path codeLine="347" d="M4217.67,1061.7695 C4217.67,1061.7695 4608.37,1061.7695 4608.37,1061.7695 " fill="none" id="CambioEstadoBolsin-to-Estado" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4613.37,1061.7695,4604.37,1057.7695,4608.37,1061.7695,4604.37,1065.7695,4613.37,1061.7695" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="42" x="4370.02" y="1075.3632">estado</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4600.3909" y="1077.2811">1</text></g><!--MD5=[4c09bad455da6715e5e89f8b69096dad]
+link CambioEstadoBolsin to Empleado--><g id="link_CambioEstadoBolsin_Empleado"><path codeLine="348" d="M4217.73,1020.1095 C4347.36,1020.1095 4540,1020.1095 4540,1020.1095 C4540,1020.1095 4540,926.6695 4540,926.6695 " fill="none" id="CambioEstadoBolsin-to-Empleado" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4540,921.6695,4536,930.6695,4540,926.6695,4544,930.6695,4540,921.6695" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="95" x="4329.59" y="1033.7032">responsableCE</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4522.2586" y="941.9453">1</text></g><!--MD5=[8cb7fef328ec741aeb18b6737b1cabce]
+link Empleado to ComisionMedica--><g id="link_Empleado_ComisionMedica"><path codeLine="349" d="M4887,921.7195 C4887,999.6195 4887,1096.1895 4887,1096.1895 C4887,1096.1895 4963.75,1096.1895 4963.75,1096.1895 " fill="none" id="Empleado-to-ComisionMedica" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="4968.75,1096.1895,4959.75,1092.1895,4963.75,1096.1895,4959.75,1100.1895,4968.75,1096.1895" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="65" x="4821" y="1060.9232">asignadoA</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4955.9879" y="1104.8659">1</text></g><!--MD5=[7201e5f29f9bf792041cbe99474fdcb9]
+link Empleado to Rol--><g id="link_Empleado_Rol"><path codeLine="350" d="M4899.3,824.9395 C4899.3,824.9395 4995.41,824.9395 4995.41,824.9395 " fill="none" id="Empleado-to-Rol" style="stroke:#17243B;stroke-width:1.0;"/><polygon fill="#17243B" points="5000.41,824.9395,4991.41,820.9395,4995.41,824.9395,4991.41,828.9395,5000.41,824.9395" style="stroke:#17243B;stroke-width:1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="16" x="4930.35" y="838.5332">rol</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacing" textLength="5" x="4987.574" y="838.0059">1</text></g><!--MD5=[65cf53f39f4c70afeb1a593d4ffa7b96]
+@startuml 01-clases-diseno-adapter
+title CU 36 Consultar seguimiento de bolsines - Vista estática de diseño (patrón Adapter)
+
+hide circle
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+left to right direction
+skinparam nodesep 40
+skinparam ranksep 70
+skinparam defaultFontName Arial
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #17243B
+  ArrowColor #17243B
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+' ============================================================
+' INTERFAZ (boundary)
+' ============================================================
+  class PantallaConsultarSeguimientoBolsines <<boundary>> {
+    - lblCMUsuario : HTMLParagraphElement
+    - lblResumen : HTMLParagraphElement
+    - frmFiltros : HTMLFormElement
+    - txtPrecinto : HTMLInputElement
+    - cmbCMDestino : HTMLSelectElement
+    - btnQuitarFiltros : HTMLButtonElement
+    - lblMensaje : HTMLDivElement
+    - lstBolsinesUbicados : HTMLUListElement
+    - lstBolsinesSinUbicacion : HTMLUListElement
+    - pnlSinBolsines : HTMLDivElement
+    - btnCancelar : HTMLButtonElement
+    - dlgConfirmacionCorreo : HTMLDialogElement
+    - lblPregunta : HTMLHeadingElement
+    - btnEnviarCorreo : HTMLButtonElement
+    - btnNoEnviar : HTMLButtonElement
+    - dlgResultado : HTMLDialogElement
+    - btnFinalizar : HTMLButtonElement
+    - mapa : InterfazMapa
+    + opcionConsultarSeguimientoBolsines() : ResponseEntity<?>
+    + tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResponseEntity<?>
+    + tomarSeleccionBolsin(numeroBolsin : int) : ResponseEntity<?>
+    + tomarConfirmacionEnvioCorreo(confirma : boolean) : ResponseEntity<?>
+    + opcionCancelar() : ResponseEntity<?>
+    - ejecutar(accion : Supplier<Object>) : ResponseEntity<?>
+    + habilitarPantalla() : void
+    + mostrarResultado(resultado : ResultadoSeguimientoDTO, esConsultaInicial : boolean) : void
+    + mostrarCMUsuario(resultado : ResultadoSeguimientoDTO) : void
+    + mostrarResumen(resultado : ResultadoSeguimientoDTO) : void
+    + cargarOpcionesCMDestino(cms : List<OpcionCMDTO>) : void
+    + mostrarSinBolsinesEnviados(resultado : ResultadoSeguimientoDTO) : void
+    + mostrarBolsinesEnLista(ubicados : List<BolsinUbicadoDTO>, sinUbicacion : List<BolsinSinUbicacionDTO>) : void
+    + mostrarBolsinesEnMapa(bolsines : List<BolsinUbicadoDTO>) : void
+    + mostrarMensaje(texto : String, tipo : String) : void
+    + quitarFiltros() : void
+    + marcarSeleccion(numero : int) : void
+    + solicitarConfirmacionEnvioCorreo(consulta : ConsultaEnvioCorreoDTO) : void
+    + informarEnvioExitoso(resultado : ResultadoNotificacionDTO) : void
+  }
+
+  class InterfazMapa <<boundary>> {
+    - googleMapsApiKey : String
+    + obtenerConfiguracionMapa() : Map<String, String>
+    + mostrarBolsines(bolsines : List<BolsinUbicadoDTO>, alSeleccionar : Function) : void
+    + resaltar(numero : int) : void
+  }
+
+  class InterfazCorreoElectronico <<boundary>> {
+    - carpetaSalida : Path
+    - remitente : String
+    + enviarCorreo(destinatario : String, asunto : String, cuerpo : String) : String
+    - codificarAsunto(asunto : String) : String
+  }
+
+note right of PantallaConsultarSeguimientoBolsines
+  En la web la Pantalla se implementa en dos partes: la vista
+  (seguimiento.html + seguimiento.js), con sus controles y los
+  métodos mostrar.../solicitar..., y la clase Java, que recibe
+  cada acción del usuario (opcion.../tomar...) y se la pasa al
+  gestor. Se muestran los controles principales; la lista
+  completa está en el objeto ui de seguimiento.js.
+end note
+
+note right of InterfazMapa
+  La API key de Google Maps es atributo de la
+  InterfazMapa porque sólo el mapa la usa (cohesión).
+  La parte Java entrega la configuración y mapa.js
+  dibuja con Google Maps (si hay API key) o con
+  Leaflet + OpenStreetMap.
+end note
+
+' ============================================================
+' CONTROL
+' ============================================================
+  class GestorConsultarSeguimientoBolsines <<control>> {
+    - sesion : SesionUsuario
+    - bolsinRepository : BolsinRepository
+    - empleadoRepository : EmpleadoRepository
+    - gestorNotificarUbicacion : GestorNotificarUbicacionBolsin
+    - adaptadoresPorModelo : Map<String, IAdaptadorGPSTracker>
+    - cmUsuarioLogueado : ComisionMedica
+    - bolsinesEnviados : List<Bolsin>
+    - ubicacionesPorBolsin : Map<Integer, UbicacionBolsin>
+    - motivosSinUbicacion : Map<Integer, String>
+    - bolsinSeleccionado : Bolsin
+    + opcionConsultarSeguimiento() : ResultadoSeguimientoDTO
+    - buscarCMUsuarioLogueado() : void
+    - buscarBolsinesEnviados() : void
+    - solicitarUbicacionesAlGPSTracker() : void
+    - obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+    + tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResultadoSeguimientoDTO
+    + tomarSeleccionBolsin(numeroBolsin : int) : ConsultaEnvioCorreoDTO
+    + tomarConfirmacionEnvioCorreo(confirma : boolean) : ResultadoNotificacionDTO
+    - buscarEmailGCMDestino() : String
+    + cancelarCU() : void
+    + finCU() : void
+    - armarResultado(bolsines : List<Bolsin>, mensaje : String, tipoMensaje : String) : ResultadoSeguimientoDTO
+    - armarOpcionesCMDestino() : List<OpcionCMDTO>
+    - mensajeSinUbicacion() : String
+    - tipoMensajeSinUbicacion() : String
+    - buscarBolsinEnviado(numeroBolsin : int) : Bolsin
+    - verificarConsultaIniciada() : void
+    - limpiarEjecucion() : void
+  }
+
+  class SesionUsuario <<control>> {
+    - empleadoLogueado : Empleado
+    + iniciar(empleado : Empleado) : void
+    + cerrar() : void
+    + estaIniciada() : boolean
+    + obtenerEmpleadoLogueado() : Empleado
+    + esEncargadoDeBolsines() : boolean
+  }
+
+  class GestorNotificarUbicacionBolsin <<control>> {
+    - interfazCorreo : InterfazCorreoElectronico
+    + notificarUbicacionBolsin(emailDestinatario : String, nombreCMDestino : String, numeroBolsin : int, fechaHoraUltimaActualizacion : LocalDateTime, latitud : double, longitud : double) : String
+  }
+
+note "Esta vista incluye los atributos y métodos de diseño de\nla implementación, y no sólo los usados en la vista dinámica.\nLos métodos de los flujos alternativos (filtros, cancelación,\ncierre de sesión, errores de formato) no tienen diagrama de\nsecuencia propio. new() representa al constructor de Java y\nse dibuja sólo en UbicacionBolsin, la clase que se crea en la\nvista dinámica.\n\nSe omiten los detalles técnicos de la implementación web:\nlas clases DTO (objetos que sólo transportan datos entre el\ngestor y la vista; en las firmas se usan como tipos de dato),\nel cliente HTTP que usan los servicios, las clases de\nexcepción, las constantes (atributos estáticos), los\nconstructores y métodos de búsqueda (@Lookup) con los que\nSpring entrega las dependencias, toString() y el id técnico\nde JPA." as NotaAlcance
+
+' ============================================================
+' PATRÓN ADAPTER
+' ============================================================
+  interface IAdaptadorGPSTracker <<interface>> {
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerXTR4500L {
+    - servicioXTR4500L : ServicioGPSTrackerXTR4500L
+    - apiKey : String
+    - objectMapper : ObjectMapper
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerNavTrackQX7A {
+    - servicioNavTrackQX7A : ServicioGPSTrackerNavTrackQX7A
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarTexto(datos : String, numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerGeoPulseMTR900 {
+    - servicioGeoPulseMTR900 : ServicioGPSTrackerGeoPulseMTR900
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarMatriz(matriz : Object[][], numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class ServicioGPSTrackerXTR4500L <<adaptable>> {
+    - urlBase : String
+    + getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  }
+
+  class ServicioGPSTrackerNavTrackQX7A <<adaptable>> {
+    - urlBase : String
+    + retrieveTrackingData(apiKey : String, numeroBolsin : int, codigoComisionMedicaDestino : String) : String
+  }
+
+  class ServicioGPSTrackerGeoPulseMTR900 <<adaptable>> {
+    - urlBase : String
+    - objectMapper : ObjectMapper
+    + fetchCargoPositions(apiKey : String, numeroBolsin : int) : Object[][]
+  }
+
+  class UbicacionBolsin {
+    - numeroBolsin : int
+    - latitud : double
+    - longitud : double
+    - fechaHoraUltimaActualizacion : LocalDateTime
+    + new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime) : void
+    + getNumeroBolsin() : int
+    + getLatitud() : double
+    + getLongitud() : double
+    + getFechaHoraUltimaActualizacion() : LocalDateTime
+  }
+
+note right of IAdaptadorGPSTracker
+  <b>Objetivo</b> (Target): la única
+  interfaz que conoce el Cliente.
+end note
+note right of GestorConsultarSeguimientoBolsines
+  <b>Cliente</b>: con obtenerAdaptador(modelo)
+  elige el adaptador según el modelo del
+  GPSTracker del bolsín y siempre llama
+  a obtenerUbicacion().
+end note
+note right of ServicioGPSTrackerXTR4500L
+  <b>Adaptables</b> (Adaptee): API de cada modelo, con
+  nombres, parámetros y respuestas incompatibles
+  (JSON en String / String con comas / matriz).
+end note
+
+' ============================================================
+' ENTIDADES
+' ============================================================
+  class Bolsin <<entity>> {
+    - numeroBolsin : Integer
+    - numeroPrecinto : Integer
+    - fecha : LocalDate
+    - peso : Double
+    + esTuCMOrigen(comisionMedica : ComisionMedica) : boolean
+    + sosEnviado() : boolean
+    + getNumeroBolsin() : Integer
+    + getNroPrecinto() : Integer
+    + obtenerCMDestino() : ComisionMedica
+    + obtenerCodigoCMOrigen() : String
+    + obtenerCodigoCMDestino() : String
+    + conocerModeloGPSTracker() : String
+    + tenesPrecinto(precinto : Integer) : boolean
+    + tenesCMDestino(codigoCM : String) : boolean
+  }
+
+  class GPSTracker <<entity>> {
+    - numeroSerie : String
+    - modelo : String
+    + getModelo() : String
+  }
+
+  class ComisionMedica <<entity>> {
+    - codigo : String
+    - nombre : String
+    - direccion : String
+    - email : String
+    - telefono : String
+    + esLaMisma(otra : ComisionMedica) : boolean
+    + getCodigo() : String
+    + getNombre() : String
+  }
+
+  class CambioEstadoBolsin <<entity>> {
+    - fechaHoraInicio : LocalDateTime
+    - fechaHoraFin : LocalDateTime
+    + sosActual() : boolean
+    + sosEnviado() : boolean
+  }
+
+  class Estado <<entity>> {
+    - ambito : String
+    - nombre : String
+    - descripcion : String
+    + esAmbitoBolsin() : boolean
+    + esEnviado() : boolean
+  }
+
+  class Empleado <<entity>> {
+    - nombre : String
+    - apellido : String
+    - email : String
+    + getCM() : ComisionMedica
+    + esTuCM(comisionMedica : ComisionMedica) : boolean
+    + sosGCM() : boolean
+    + sosEncargadoDeBolsines() : boolean
+    + getEmail() : String
+  }
+
+  class Rol <<entity>> {
+    - nombre : String
+    - descripcion : String
+    + esGCM() : boolean
+    + esEncargadoDeBolsines() : boolean
+  }
+
+note right of GPSTracker
+  Clase agregada al Modelo de Dominio
+  (RNF 6: cada bolsín tiene su GPS Tracker).
+end note
+
+' ============================================================
+' PERSISTENCIA
+' ============================================================
+  interface BolsinRepository <<interface>> {
+    + findAll() : List<Bolsin>
+  }
+  interface EmpleadoRepository <<interface>> {
+    + findAll() : List<Empleado>
+  }
+note right of EmpleadoRepository
+  Extienden JpaRepository: Spring Data JPA
+  genera la implementación (H2 + Hibernate).
+end note
+
+' ============================================================
+' RELACIONES
+' Convención de la cátedra: entre clases de fabricación pura y de
+' control a entidad se usan dependencias; entre entidades, asociaciones.
+' ============================================================
+PantallaConsultarSeguimientoBolsines ..> GestorConsultarSeguimientoBolsines
+PantallaConsultarSeguimientoBolsines ..> SesionUsuario
+PantallaConsultarSeguimientoBolsines ..> InterfazMapa
+
+GestorConsultarSeguimientoBolsines ..> SesionUsuario
+GestorConsultarSeguimientoBolsines ..> BolsinRepository
+GestorConsultarSeguimientoBolsines ..> EmpleadoRepository
+GestorConsultarSeguimientoBolsines ..> GestorNotificarUbicacionBolsin
+GestorConsultarSeguimientoBolsines ..> IAdaptadorGPSTracker
+GestorConsultarSeguimientoBolsines ..> UbicacionBolsin
+GestorConsultarSeguimientoBolsines ..> Bolsin
+GestorConsultarSeguimientoBolsines ..> ComisionMedica
+GestorConsultarSeguimientoBolsines ..> Empleado
+
+GestorNotificarUbicacionBolsin ..> InterfazCorreoElectronico
+SesionUsuario ..> Empleado
+BolsinRepository ..> Bolsin
+EmpleadoRepository ..> Empleado
+
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerXTR4500L
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerNavTrackQX7A
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerGeoPulseMTR900
+AdaptadorGPSTrackerXTR4500L ..> ServicioGPSTrackerXTR4500L
+AdaptadorGPSTrackerNavTrackQX7A ..> ServicioGPSTrackerNavTrackQX7A
+AdaptadorGPSTrackerGeoPulseMTR900 ..> ServicioGPSTrackerGeoPulseMTR900
+IAdaptadorGPSTracker ..> UbicacionBolsin : <<create>>
+
+Bolsin - -> "1" ComisionMedica : origen
+Bolsin - -> "1" ComisionMedica : destino
+Bolsin - -> "1..*" CambioEstadoBolsin : cambioEstado
+Bolsin - -> "1" GPSTracker : gpsTracker
+CambioEstadoBolsin - -> "1" Estado : estado
+CambioEstadoBolsin - -> "1" Empleado : responsableCE
+Empleado - -> "1" ComisionMedica : asignadoA
+Empleado - -> "1" Rol : rol
+
+@enduml
+
+@startuml 01-clases-diseno-adapter
+title CU 36 Consultar seguimiento de bolsines - Vista estática de diseño (patrón Adapter)
+
+hide circle
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+left to right direction
+skinparam nodesep 40
+skinparam ranksep 70
+skinparam defaultFontName Arial
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #17243B
+  ArrowColor #17243B
+}
+skinparam note {
+  BackgroundColor #FFF7DC
+  BorderColor #E8B10A
+}
+
+  class PantallaConsultarSeguimientoBolsines <<boundary>> {
+    - lblCMUsuario : HTMLParagraphElement
+    - lblResumen : HTMLParagraphElement
+    - frmFiltros : HTMLFormElement
+    - txtPrecinto : HTMLInputElement
+    - cmbCMDestino : HTMLSelectElement
+    - btnQuitarFiltros : HTMLButtonElement
+    - lblMensaje : HTMLDivElement
+    - lstBolsinesUbicados : HTMLUListElement
+    - lstBolsinesSinUbicacion : HTMLUListElement
+    - pnlSinBolsines : HTMLDivElement
+    - btnCancelar : HTMLButtonElement
+    - dlgConfirmacionCorreo : HTMLDialogElement
+    - lblPregunta : HTMLHeadingElement
+    - btnEnviarCorreo : HTMLButtonElement
+    - btnNoEnviar : HTMLButtonElement
+    - dlgResultado : HTMLDialogElement
+    - btnFinalizar : HTMLButtonElement
+    - mapa : InterfazMapa
+    + opcionConsultarSeguimientoBolsines() : ResponseEntity<?>
+    + tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResponseEntity<?>
+    + tomarSeleccionBolsin(numeroBolsin : int) : ResponseEntity<?>
+    + tomarConfirmacionEnvioCorreo(confirma : boolean) : ResponseEntity<?>
+    + opcionCancelar() : ResponseEntity<?>
+    - ejecutar(accion : Supplier<Object>) : ResponseEntity<?>
+    + habilitarPantalla() : void
+    + mostrarResultado(resultado : ResultadoSeguimientoDTO, esConsultaInicial : boolean) : void
+    + mostrarCMUsuario(resultado : ResultadoSeguimientoDTO) : void
+    + mostrarResumen(resultado : ResultadoSeguimientoDTO) : void
+    + cargarOpcionesCMDestino(cms : List<OpcionCMDTO>) : void
+    + mostrarSinBolsinesEnviados(resultado : ResultadoSeguimientoDTO) : void
+    + mostrarBolsinesEnLista(ubicados : List<BolsinUbicadoDTO>, sinUbicacion : List<BolsinSinUbicacionDTO>) : void
+    + mostrarBolsinesEnMapa(bolsines : List<BolsinUbicadoDTO>) : void
+    + mostrarMensaje(texto : String, tipo : String) : void
+    + quitarFiltros() : void
+    + marcarSeleccion(numero : int) : void
+    + solicitarConfirmacionEnvioCorreo(consulta : ConsultaEnvioCorreoDTO) : void
+    + informarEnvioExitoso(resultado : ResultadoNotificacionDTO) : void
+  }
+
+  class InterfazMapa <<boundary>> {
+    - googleMapsApiKey : String
+    + obtenerConfiguracionMapa() : Map<String, String>
+    + mostrarBolsines(bolsines : List<BolsinUbicadoDTO>, alSeleccionar : Function) : void
+    + resaltar(numero : int) : void
+  }
+
+  class InterfazCorreoElectronico <<boundary>> {
+    - carpetaSalida : Path
+    - remitente : String
+    + enviarCorreo(destinatario : String, asunto : String, cuerpo : String) : String
+    - codificarAsunto(asunto : String) : String
+  }
+
+note right of PantallaConsultarSeguimientoBolsines
+  En la web la Pantalla se implementa en dos partes: la vista
+  (seguimiento.html + seguimiento.js), con sus controles y los
+  métodos mostrar.../solicitar..., y la clase Java, que recibe
+  cada acción del usuario (opcion.../tomar...) y se la pasa al
+  gestor. Se muestran los controles principales; la lista
+  completa está en el objeto ui de seguimiento.js.
+end note
+
+note right of InterfazMapa
+  La API key de Google Maps es atributo de la
+  InterfazMapa porque sólo el mapa la usa (cohesión).
+  La parte Java entrega la configuración y mapa.js
+  dibuja con Google Maps (si hay API key) o con
+  Leaflet + OpenStreetMap.
+end note
+
+  class GestorConsultarSeguimientoBolsines <<control>> {
+    - sesion : SesionUsuario
+    - bolsinRepository : BolsinRepository
+    - empleadoRepository : EmpleadoRepository
+    - gestorNotificarUbicacion : GestorNotificarUbicacionBolsin
+    - adaptadoresPorModelo : Map<String, IAdaptadorGPSTracker>
+    - cmUsuarioLogueado : ComisionMedica
+    - bolsinesEnviados : List<Bolsin>
+    - ubicacionesPorBolsin : Map<Integer, UbicacionBolsin>
+    - motivosSinUbicacion : Map<Integer, String>
+    - bolsinSeleccionado : Bolsin
+    + opcionConsultarSeguimiento() : ResultadoSeguimientoDTO
+    - buscarCMUsuarioLogueado() : void
+    - buscarBolsinesEnviados() : void
+    - solicitarUbicacionesAlGPSTracker() : void
+    - obtenerAdaptador(modelo : String) : IAdaptadorGPSTracker
+    + tomarFiltros(numeroPrecinto : Integer, codigoCMDestino : String) : ResultadoSeguimientoDTO
+    + tomarSeleccionBolsin(numeroBolsin : int) : ConsultaEnvioCorreoDTO
+    + tomarConfirmacionEnvioCorreo(confirma : boolean) : ResultadoNotificacionDTO
+    - buscarEmailGCMDestino() : String
+    + cancelarCU() : void
+    + finCU() : void
+    - armarResultado(bolsines : List<Bolsin>, mensaje : String, tipoMensaje : String) : ResultadoSeguimientoDTO
+    - armarOpcionesCMDestino() : List<OpcionCMDTO>
+    - mensajeSinUbicacion() : String
+    - tipoMensajeSinUbicacion() : String
+    - buscarBolsinEnviado(numeroBolsin : int) : Bolsin
+    - verificarConsultaIniciada() : void
+    - limpiarEjecucion() : void
+  }
+
+  class SesionUsuario <<control>> {
+    - empleadoLogueado : Empleado
+    + iniciar(empleado : Empleado) : void
+    + cerrar() : void
+    + estaIniciada() : boolean
+    + obtenerEmpleadoLogueado() : Empleado
+    + esEncargadoDeBolsines() : boolean
+  }
+
+  class GestorNotificarUbicacionBolsin <<control>> {
+    - interfazCorreo : InterfazCorreoElectronico
+    + notificarUbicacionBolsin(emailDestinatario : String, nombreCMDestino : String, numeroBolsin : int, fechaHoraUltimaActualizacion : LocalDateTime, latitud : double, longitud : double) : String
+  }
+
+note "Esta vista incluye los atributos y métodos de diseño de\nla implementación, y no sólo los usados en la vista dinámica.\nLos métodos de los flujos alternativos (filtros, cancelación,\ncierre de sesión, errores de formato) no tienen diagrama de\nsecuencia propio. new() representa al constructor de Java y\nse dibuja sólo en UbicacionBolsin, la clase que se crea en la\nvista dinámica.\n\nSe omiten los detalles técnicos de la implementación web:\nlas clases DTO (objetos que sólo transportan datos entre el\ngestor y la vista; en las firmas se usan como tipos de dato),\nel cliente HTTP que usan los servicios, las clases de\nexcepción, las constantes (atributos estáticos), los\nconstructores y métodos de búsqueda (@Lookup) con los que\nSpring entrega las dependencias, toString() y el id técnico\nde JPA." as NotaAlcance
+
+  interface IAdaptadorGPSTracker <<interface>> {
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerXTR4500L {
+    - servicioXTR4500L : ServicioGPSTrackerXTR4500L
+    - apiKey : String
+    - objectMapper : ObjectMapper
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerNavTrackQX7A {
+    - servicioNavTrackQX7A : ServicioGPSTrackerNavTrackQX7A
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarTexto(datos : String, numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class AdaptadorGPSTrackerGeoPulseMTR900 {
+    - servicioGeoPulseMTR900 : ServicioGPSTrackerGeoPulseMTR900
+    - apiKey : String
+    + getModelo() : String
+    + obtenerUbicacion(numeroBolsin : int, codigoCMOrigen : String, codigoCMDestino : String) : UbicacionBolsin
+    - interpretarMatriz(matriz : Object[][], numeroBolsin : int) : UbicacionBolsin
+  }
+
+  class ServicioGPSTrackerXTR4500L <<adaptable>> {
+    - urlBase : String
+    + getBolsinLocation(apiKey : String, numeroBolsin : int, codigoComisionMedicaOrigen : String) : String
+  }
+
+  class ServicioGPSTrackerNavTrackQX7A <<adaptable>> {
+    - urlBase : String
+    + retrieveTrackingData(apiKey : String, numeroBolsin : int, codigoComisionMedicaDestino : String) : String
+  }
+
+  class ServicioGPSTrackerGeoPulseMTR900 <<adaptable>> {
+    - urlBase : String
+    - objectMapper : ObjectMapper
+    + fetchCargoPositions(apiKey : String, numeroBolsin : int) : Object[][]
+  }
+
+  class UbicacionBolsin {
+    - numeroBolsin : int
+    - latitud : double
+    - longitud : double
+    - fechaHoraUltimaActualizacion : LocalDateTime
+    + new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime) : void
+    + getNumeroBolsin() : int
+    + getLatitud() : double
+    + getLongitud() : double
+    + getFechaHoraUltimaActualizacion() : LocalDateTime
+  }
+
+note right of IAdaptadorGPSTracker
+  <b>Objetivo</b> (Target): la única
+  interfaz que conoce el Cliente.
+end note
+note right of GestorConsultarSeguimientoBolsines
+  <b>Cliente</b>: con obtenerAdaptador(modelo)
+  elige el adaptador según el modelo del
+  GPSTracker del bolsín y siempre llama
+  a obtenerUbicacion().
+end note
+note right of ServicioGPSTrackerXTR4500L
+  <b>Adaptables</b> (Adaptee): API de cada modelo, con
+  nombres, parámetros y respuestas incompatibles
+  (JSON en String / String con comas / matriz).
+end note
+
+  class Bolsin <<entity>> {
+    - numeroBolsin : Integer
+    - numeroPrecinto : Integer
+    - fecha : LocalDate
+    - peso : Double
+    + esTuCMOrigen(comisionMedica : ComisionMedica) : boolean
+    + sosEnviado() : boolean
+    + getNumeroBolsin() : Integer
+    + getNroPrecinto() : Integer
+    + obtenerCMDestino() : ComisionMedica
+    + obtenerCodigoCMOrigen() : String
+    + obtenerCodigoCMDestino() : String
+    + conocerModeloGPSTracker() : String
+    + tenesPrecinto(precinto : Integer) : boolean
+    + tenesCMDestino(codigoCM : String) : boolean
+  }
+
+  class GPSTracker <<entity>> {
+    - numeroSerie : String
+    - modelo : String
+    + getModelo() : String
+  }
+
+  class ComisionMedica <<entity>> {
+    - codigo : String
+    - nombre : String
+    - direccion : String
+    - email : String
+    - telefono : String
+    + esLaMisma(otra : ComisionMedica) : boolean
+    + getCodigo() : String
+    + getNombre() : String
+  }
+
+  class CambioEstadoBolsin <<entity>> {
+    - fechaHoraInicio : LocalDateTime
+    - fechaHoraFin : LocalDateTime
+    + sosActual() : boolean
+    + sosEnviado() : boolean
+  }
+
+  class Estado <<entity>> {
+    - ambito : String
+    - nombre : String
+    - descripcion : String
+    + esAmbitoBolsin() : boolean
+    + esEnviado() : boolean
+  }
+
+  class Empleado <<entity>> {
+    - nombre : String
+    - apellido : String
+    - email : String
+    + getCM() : ComisionMedica
+    + esTuCM(comisionMedica : ComisionMedica) : boolean
+    + sosGCM() : boolean
+    + sosEncargadoDeBolsines() : boolean
+    + getEmail() : String
+  }
+
+  class Rol <<entity>> {
+    - nombre : String
+    - descripcion : String
+    + esGCM() : boolean
+    + esEncargadoDeBolsines() : boolean
+  }
+
+note right of GPSTracker
+  Clase agregada al Modelo de Dominio
+  (RNF 6: cada bolsín tiene su GPS Tracker).
+end note
+
+  interface BolsinRepository <<interface>> {
+    + findAll() : List<Bolsin>
+  }
+  interface EmpleadoRepository <<interface>> {
+    + findAll() : List<Empleado>
+  }
+note right of EmpleadoRepository
+  Extienden JpaRepository: Spring Data JPA
+  genera la implementación (H2 + Hibernate).
+end note
+
+PantallaConsultarSeguimientoBolsines ..> GestorConsultarSeguimientoBolsines
+PantallaConsultarSeguimientoBolsines ..> SesionUsuario
+PantallaConsultarSeguimientoBolsines ..> InterfazMapa
+
+GestorConsultarSeguimientoBolsines ..> SesionUsuario
+GestorConsultarSeguimientoBolsines ..> BolsinRepository
+GestorConsultarSeguimientoBolsines ..> EmpleadoRepository
+GestorConsultarSeguimientoBolsines ..> GestorNotificarUbicacionBolsin
+GestorConsultarSeguimientoBolsines ..> IAdaptadorGPSTracker
+GestorConsultarSeguimientoBolsines ..> UbicacionBolsin
+GestorConsultarSeguimientoBolsines ..> Bolsin
+GestorConsultarSeguimientoBolsines ..> ComisionMedica
+GestorConsultarSeguimientoBolsines ..> Empleado
+
+GestorNotificarUbicacionBolsin ..> InterfazCorreoElectronico
+SesionUsuario ..> Empleado
+BolsinRepository ..> Bolsin
+EmpleadoRepository ..> Empleado
+
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerXTR4500L
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerNavTrackQX7A
+IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerGeoPulseMTR900
+AdaptadorGPSTrackerXTR4500L ..> ServicioGPSTrackerXTR4500L
+AdaptadorGPSTrackerNavTrackQX7A ..> ServicioGPSTrackerNavTrackQX7A
+AdaptadorGPSTrackerGeoPulseMTR900 ..> ServicioGPSTrackerGeoPulseMTR900
+IAdaptadorGPSTracker ..> UbicacionBolsin : <<create>>
+
+Bolsin - -> "1" ComisionMedica : origen
+Bolsin - -> "1" ComisionMedica : destino
+Bolsin - -> "1..*" CambioEstadoBolsin : cambioEstado
+Bolsin - -> "1" GPSTracker : gpsTracker
+CambioEstadoBolsin - -> "1" Estado : estado
+CambioEstadoBolsin - -> "1" Empleado : responsableCE
+Empleado - -> "1" ComisionMedica : asignadoA
+Empleado - -> "1" Rol : rol
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 15:12:26 ART 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

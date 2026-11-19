@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de bolsines</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<main class="inicio">
+  <header class="inicio-cabecera">
+    <h1>Gestión de bolsines</h1>
+    <p id="bajada">Elegí un usuario de prueba para ingresar. El inicio de sesión está simulado; el caso de uso que se implementa es el 36.</p>
+  </header>
+
+  <div id="aviso" class="alerta" hidden></div>
+
+  <!-- Simulación del CU 5: lista de usuarios -->
+  <section id="seccion-usuarios" hidden>
+    <div class="grupo-usuarios">
+      <h2>Encargados de bolsines</h2>
+      <ul class="lista-usuarios" id="lista-encargados"></ul>
+    </div>
+    <div class="grupo-usuarios">
+      <h2>Otros roles</h2>
+      <ul class="lista-usuarios" id="lista-otros"></ul>
+    </div>
+  </section>
+
+  <!-- Menú del usuario logueado -->
+  <section id="seccion-menu" class="menu" hidden>
+    <h2 id="menu-saludo"></h2>
+    <p class="subtitulo" id="menu-cm"></p>
+    <div class="menu-opciones" id="menu-opciones"></div>
+    <p class="subtitulo" id="menu-sin-opciones" hidden>Este rol no tiene opciones en este prototipo. Ingresá con un Encargado de bolsines.</p>
+    <div class="menu-opciones">
+      <button class="boton boton-secundario" id="boton-cerrar-sesion" type="button">Cerrar sesión</button>
+    </div>
+  </section>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>
