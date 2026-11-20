@@ -26,6 +26,7 @@ control ":GestorConsultar\nSeguimientoBolsines" as G
 control ":SesionUsuario" as S
 entity "logueado:\nEmpleado" as E
 entity "cmUsuario:\nComisionMedica" as CMU
+entity "rolUsuario:\nRol" as RU
 participant ":BolsinRepository" as BR
 entity ":Bolsin" as B #F6C28B
 entity "seleccionado:\nBolsin" as BS
@@ -52,19 +53,27 @@ note right of P
   InterfazMapa y dispara esta opción.
 end note
 P -> P : ejecutar(accion : Supplier<Object>) : ResponseEntity<?>
+activate P
 P -> S : estaIniciada() : boolean
 P -> S : esEncargadoDeBolsines() : boolean
+activate S
+S -> E : sosEncargadoDeBolsines() : boolean
+E -> RU : esEncargadoDeBolsines() : boolean
+deactivate S
 P -> G : opcionConsultarSeguimiento() : ResultadoSeguimientoDTO
 activate G
 G -> G : limpiarEjecucion() : void
 
 == Paso 2: CM del usuario logueado ==
 G -> G : buscarCMUsuarioLogueado() : void
+activate G
 G -> S : obtenerEmpleadoLogueado() : Empleado
 G -> E : getCM() : ComisionMedica
+deactivate G
 
 == Paso 3: bolsines Enviados cuya CM origen es la del usuario ==
 G -> G : buscarBolsinesEnviados() : void
+activate G
 G -> BR : findAll() : List<Bolsin>
 loop mientras haya bolsines
   G -> B : esTuCMOrigen(comisionMedica : ComisionMedica) : boolean
@@ -82,9 +91,15 @@ loop mientras haya bolsines
     end
   end
 end
+G -> B : ~*getNumeroBolsin() : Integer
+note right of G
+  Ordena los bolsines enviados por número.
+end note
+deactivate G
 
 == Pasos 4 y 5: se solicita la ubicación al GPS Tracker de cada bolsín (Adapter) ==
 G -> G : solicitarUbicacionesAlGPSTracker() : void
+activate G
 loop mientras haya bolsines enviados
   G -> B : conocerModeloGPSTracker() : String
   B -> GT : getModelo() : String
@@ -110,49 +125,83 @@ loop mientras haya bolsines enviados
     longitud, fechaHoraUltimaActualizacion}]}
   end note
   A -> A : interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  activate A
   create U
   A --> U : new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime)
   deactivate A
+  deactivate A
+  G -> B : getNumeroBolsin() : Integer
 end
+deactivate G
 
 == Paso 6: se muestran los bolsines en el mapa ==
 G -> G : mensajeSinUbicacion() : String
 G -> G : tipoMensajeSinUbicacion() : String
 G -> G : armarResultado(bolsines : List<Bolsin>, mensaje : String, tipoMensaje : String) : ResultadoSeguimientoDTO
 activate G
+loop mientras haya bolsines
+  G -> B : getNumeroBolsin() : Integer
+  G -> B : getNroPrecinto() : Integer
+  G -> B : obtenerCodigoCMDestino() : String
+  B -> CM : getCodigo() : String
+  G -> B : obtenerCMDestino() : ComisionMedica
+  G -> CM : getNombre() : String
+  G -> B : conocerModeloGPSTracker() : String
+  B -> GT : getModelo() : String
+  G -> U : getLatitud() : double
+  G -> U : getLongitud() : double
+  G -> U : getFechaHoraUltimaActualizacion() : LocalDateTime
+end
+G -> CMU : getCodigo() : String
+G -> CMU : getNombre() : String
 G -> G : armarOpcionesCMDestino() : List<OpcionCMDTO>
+activate G
+loop mientras haya bolsines enviados
+  G -> B : obtenerCMDestino() : ComisionMedica
+  G -> CM : getCodigo() : String
+  G -> CM : getNombre() : String
+end
 deactivate G
-note right of G
-  armarResultado() arma, para la pantalla, los datos
-  de cada bolsín con su ubicación.
-end note
 deactivate G
+deactivate G
+deactivate P
 P -> P : mostrarResultado(resultado : ResultadoSeguimientoDTO, esConsultaInicial : boolean) : void
+activate P
 P -> P : mostrarCMUsuario(resultado : ResultadoSeguimientoDTO) : void
 P -> P : cargarOpcionesCMDestino(cms : List<OpcionCMDTO>) : void
 P -> P : mostrarResumen(resultado : ResultadoSeguimientoDTO) : void
 P -> P : mostrarBolsinesEnLista(ubicados : List<BolsinUbicadoDTO>, sinUbicacion : List<BolsinSinUbicacionDTO>) : void
 P -> P : mostrarBolsinesEnMapa(bolsines : List<BolsinUbicadoDTO>) : void
+activate P
 P -> M : mostrarBolsines(bolsines : List<BolsinUbicadoDTO>, alSeleccionar : Function) : void
 note right of M
   InterfazMapa representa al Servidor Google Maps
   (actor secundario): dibuja el mapa y un marcador
   por cada bolsín.
 end note
+deactivate P
 P -> P : mostrarMensaje(texto : String, tipo : String) : void
+deactivate P
 deactivate P
 
 == Paso 7: el EB selecciona un bolsín del mapa ==
 EB -> P : tomarSeleccionBolsin(numeroBolsin : int) : ResponseEntity<?>
 activate P
 P -> P : ejecutar(accion : Supplier<Object>) : ResponseEntity<?>
+activate P
 P -> S : estaIniciada() : boolean
 P -> S : esEncargadoDeBolsines() : boolean
+activate S
+S -> E : sosEncargadoDeBolsines() : boolean
+E -> RU : esEncargadoDeBolsines() : boolean
+deactivate S
 P -> G : tomarSeleccionBolsin(numeroBolsin : int) : ConsultaEnvioCorreoDTO
 activate G
 G -> G : verificarConsultaIniciada() : void
 G -> G : buscarBolsinEnviado(numeroBolsin : int) : Bolsin
+activate G
 G -> B : ~*getNumeroBolsin() : Integer
+deactivate G
 G -> BS : obtenerCMDestino() : ComisionMedica
 G -> DEST : getNombre() : String
 G -> BS : getNroPrecinto() : Integer
@@ -160,8 +209,11 @@ G -> UB : getFechaHoraUltimaActualizacion() : LocalDateTime
 G -> UB : getLatitud() : double
 G -> UB : getLongitud() : double
 deactivate G
+deactivate P
 P -> P : marcarSeleccion(numero : int) : void
+activate P
 P -> M : resaltar(numero : int) : void
+deactivate P
 
 == Paso 8: se consulta si se desea enviar el correo ==
 P -> P : solicitarConfirmacionEnvioCorreo(consulta : ConsultaEnvioCorreoDTO) : void
@@ -171,14 +223,20 @@ deactivate P
 EB -> P : tomarConfirmacionEnvioCorreo(confirma : boolean) : ResponseEntity<?>
 activate P
 P -> P : ejecutar(accion : Supplier<Object>) : ResponseEntity<?>
+activate P
 P -> S : estaIniciada() : boolean
 P -> S : esEncargadoDeBolsines() : boolean
+activate S
+S -> E : sosEncargadoDeBolsines() : boolean
+E -> RU : esEncargadoDeBolsines() : boolean
+deactivate S
 P -> G : tomarConfirmacionEnvioCorreo(confirma : boolean) : ResultadoNotificacionDTO
 activate G
 G -> G : verificarConsultaIniciada() : void
 
 == Paso 10: se busca el correo del Gerente de la CM destino ==
 G -> G : buscarEmailGCMDestino() : String
+activate G
 G -> BS : obtenerCMDestino() : ComisionMedica
 G -> ER : findAll() : List<Empleado>
 loop mientras haya empleados y no se encuentre el GCM
@@ -193,9 +251,11 @@ loop mientras haya empleados y no se encuentre el GCM
     end
   end
 end
+deactivate G
 
 == Paso 11: se incluye al CU 30 Notificar ubicación de bolsín ==
 G -> BS : obtenerCMDestino() : ComisionMedica
+G -> BS : getNumeroBolsin() : Integer
 G -> DEST : getNombre() : String
 G -> UB : getNumeroBolsin() : int
 G -> UB : getFechaHoraUltimaActualizacion() : LocalDateTime
@@ -213,9 +273,14 @@ note right of IC
 end note
 deactivate IC
 deactivate GN
+G -> UB : getNumeroBolsin() : int
+G -> DEST : getNombre() : String
 G -> G : finCU() : void
+activate G
 G -> G : limpiarEjecucion() : void
 deactivate G
+deactivate G
+deactivate P
 P -> P : informarEnvioExitoso(resultado : ResultadoNotificacionDTO) : void
 deactivate P
 @enduml

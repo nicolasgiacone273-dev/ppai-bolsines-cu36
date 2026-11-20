@@ -339,7 +339,10 @@ IAdaptadorGPSTracker <|.. AdaptadorGPSTrackerGeoPulseMTR900
 AdaptadorGPSTrackerXTR4500L ..> ServicioGPSTrackerXTR4500L
 AdaptadorGPSTrackerNavTrackQX7A ..> ServicioGPSTrackerNavTrackQX7A
 AdaptadorGPSTrackerGeoPulseMTR900 ..> ServicioGPSTrackerGeoPulseMTR900
-IAdaptadorGPSTracker ..> UbicacionBolsin : <<create>>
+IAdaptadorGPSTracker ..> UbicacionBolsin
+AdaptadorGPSTrackerXTR4500L ..> UbicacionBolsin : <<create>>
+AdaptadorGPSTrackerNavTrackQX7A ..> UbicacionBolsin : <<create>>
+AdaptadorGPSTrackerGeoPulseMTR900 ..> UbicacionBolsin : <<create>>
 
 Bolsin --> "1" ComisionMedica : origen
 Bolsin --> "1" ComisionMedica : destino

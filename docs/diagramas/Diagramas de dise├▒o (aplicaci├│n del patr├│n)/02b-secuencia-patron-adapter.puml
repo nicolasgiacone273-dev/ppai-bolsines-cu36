@@ -37,6 +37,7 @@ note over G
 end note
 activate G
 G -> G : solicitarUbicacionesAlGPSTracker() : void
+activate G
 loop mientras haya bolsines enviados
   G -> B : conocerModeloGPSTracker() : String
   B -> GT : getModelo() : String
@@ -62,9 +63,13 @@ loop mientras haya bolsines enviados
     longitud, fechaHoraUltimaActualizacion}]}
   end note
   A -> A : interpretarJson(json : String, numeroBolsin : int) : UbicacionBolsin
+  activate A
   create U
   A --> U : new(numeroBolsin : int, latitud : double, longitud : double, fechaHoraUltimaActualizacion : LocalDateTime)
   deactivate A
+  deactivate A
+  G -> B : getNumeroBolsin() : Integer
 end
+deactivate G
 deactivate G
 @enduml

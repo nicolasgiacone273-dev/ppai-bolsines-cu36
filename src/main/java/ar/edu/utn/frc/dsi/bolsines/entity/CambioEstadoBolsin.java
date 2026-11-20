@@ -29,7 +29,7 @@ public class CambioEstadoBolsin {
     @JoinColumn(name = "estado_id")
     private Estado estado;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "responsable_id")
     private Empleado responsableCE;
 
